@@ -1,0 +1,12 @@
+body_pred(does/3).
+body_pred(my_input/2).
+body_pred(my_true/2).
+body_pred(my_succ/2).
+body_pred(role/1).
+body_pred(c_p/1).
+body_pred(c_q/1).
+body_pred(c_r/1).
+body_pred(c_a/1).
+body_pred(c_b/1).
+body_pred(c_c/1).
+body_pred(not_my_true/2).
