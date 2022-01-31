@@ -5,32 +5,33 @@ from .problem.trains import TRAINS1
 from .problem.list import DROP_K
 from .problem.iggp import BUTTONS
 
-
 DEFAULT_OUTPUT_PATH='./results'
 
 class Experiment:
-    def __init__(self, problems=DEFAULT_PROBLEMS, systems=[BASIC_POPPER], output_path=DEFAULT_OUTPUT_PATH, num_trials=20):
+    def __init__(self, problems=DEFAULT_PROBLEMS, systems=[BASIC_POPPER], output_path=DEFAULT_OUTPUT_PATH, trials=20):
         self.output_path = output_path
         self.problems = problems
         self.systems = systems
 
-        assert num_trials > 0
-        self.num_trials = num_trials
-
-        if num_trials == 1:
-            self.trials = [None]
+        if isinstance(trials, int):
+            if trials == None or trials <= 1:
+                self.trials = [None]
+            else:
+                self.trials = range(trials)
+        elif isinstance(trials, list):
+            self.trials = trials
         else:
-            self.trials = range(num_trials)
+            raise(Exception(f"Unexpected data type given for Experiment parameter trials: {trials}"))
 
 """
     This is just a quick test experiment that runs in under five seconds.
 """
-FAST_TEST = Experiment(problems=[TRAINS1], num_trials=1)
+FAST_TEST = Experiment(problems=[TRAINS1], trials=1)
 
 """
     This experiment runs 2 trials of all systems on default problems. It's useful for testing.
 """
-BASIC_TEST = Experiment(systems=ALL_BASIC_SYSTEMS, num_trials=2)
+BASIC_TEST = Experiment(systems=ALL_BASIC_SYSTEMS, trials=[3, 4])
 
 """
     This experiment will test Popper with default parameters against all the problems
@@ -45,7 +46,7 @@ DEFAULT = Experiment()
 ALL = Experiment(
     problems=ALL_PROBLEMS,
     systems=ALL_BASIC_SYSTEMS,
-    num_trials=10)
+    trials=10)
 
 """
     This example demonstrates comparing different versions of Popper, for instance

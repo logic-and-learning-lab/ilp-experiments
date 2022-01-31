@@ -29,7 +29,7 @@ def test_gen():
     assert popper.train_settings.stats_file == f"{BASE_PATH}/dropk/popper/stats.json"
 
 def test_trials():
-    experiment = Experiment(BASE_PATH, DROP_K, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], num_trials=3)
+    experiment = Experiment(BASE_PATH, DROP_K, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], trials=3)
     instances = DROP_K.generate_instances(experiment)
 
     popper = None
