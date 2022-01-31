@@ -2,6 +2,7 @@ import multiprocessing as mp
 import traceback
 import sys
 import os
+import math
 from ..util import get_logger, mkfile
 from ..result import write_result
 
@@ -18,17 +19,24 @@ def generate_instances(experiment):
     return instances
 
 class SimpleRunner:
+    def __init__(self, num_threads=None):
+        if num_threads == None:
+            num_threads = math.ceil(mp.cpu_count() / 2.0)
+        
+        self.num_threads = num_threads
+
     def run(self, experiment):
 
         instances = generate_instances(experiment)
 
         logger = get_logger()
 
-        # We have to launch a new process every time because pyswip reuses the Prolog instance which messes up some of the systems.
+        # TODO (Brad): We could probably re-use instances here. Before we had to start new processes because of Popper
+        # re-using pyswip instances. However, as long as all systems are run as subcommands, this is not a problem.
 
         ctx = mp.get_context('spawn')
         with ctx.Manager() as manager:
-            sema = manager.BoundedSemaphore(mp.cpu_count())
+            sema = manager.BoundedSemaphore(self.num_threads)
             
             results_q = manager.Queue()
             
