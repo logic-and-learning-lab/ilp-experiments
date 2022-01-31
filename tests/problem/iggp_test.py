@@ -41,7 +41,7 @@ def test_gen():
     assert exists(metagol.train_settings.prim_file)
 
 def test_trials():
-    experiment = Experiment(BASE_PATH, BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], num_trials=3)
+    experiment = Experiment(BASE_PATH, BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], trials=3)
 
     instances = BUTTONS.generate_instances(experiment)
     assert len(instances) == 9
