@@ -3,8 +3,9 @@ import traceback
 import sys
 import os
 import math
-from ..util import get_logger, mkfile
-from ..result import write_result
+import logging
+from .. util import configure_logging, get_logger, mkfile
+from .. json import write_json
 
 def queue_to_list(q):
     l = []
@@ -12,22 +13,22 @@ def queue_to_list(q):
         l.append(q.get())
     return l
 
-def generate_instances(experiment):
+def generate_instances(experiment, output_path):
     instances = []
     for problem in experiment.problems:
-        instances.extend(problem.generate_instances(experiment))
+        instances.extend(problem.generate_instances(experiment, output_path))
     return instances
 
-class SimpleRunner:
+class LocalRunner:
     def __init__(self, num_threads=None):
         if num_threads == None:
             num_threads = math.ceil(mp.cpu_count() / 2.0)
         
         self.num_threads = num_threads
 
-    def run(self, experiment):
+    def run(self, experiment, data_path, results_path):
 
-        instances = generate_instances(experiment)
+        instances = generate_instances(experiment, data_path)
 
         logger = get_logger()
 
@@ -56,7 +57,7 @@ class SimpleRunner:
                         sema.release()
                 unhandled_processes = new_unhandled_processes
                 
-                p = ctx.Process(target=self.run_instance, args=(experiment.output_path, instance, sema, results_q), name=instance.name)
+                p = ctx.Process(target=self.run_instance, args=(experiment, results_path, instance, sema, results_q), name=instance.name)
                 all_processes.append(p)
                 unhandled_processes.append(p)
                 p.start()
@@ -70,17 +71,21 @@ class SimpleRunner:
         for result in result_list:
             logger.info(result)
         
-        results_file = os.path.abspath(mkfile(experiment.output_path, "results.json"))
-        write_result(results_file, result_list)
+        results_file = os.path.abspath(mkfile(results_path, "results.json"))
+        write_json(results_file, result_list)
 
         logger.info(f"Results for {len(result_list)} instances written to {results_file}")
 
-    def run_instance(self, output_path, instance, sema, results_q):
+    def run_instance(self, experiment, results_path, instance, sema, results_q):
+        
+        # Change this if you need debug info in the threads.
+        configure_logging(logging.ERROR)
+
         logger = get_logger()
         logger.info(f'\nRunning {instance.name}')
 
         try:
-            result = instance.run()
+            result = instance.run(experiment)
         except Exception as e:
             logger.info(f"Exception in instance {instance.name}")
             logger.info(traceback.format_exc())
@@ -90,7 +95,7 @@ class SimpleRunner:
         logger.info(f'{instance.name} completed in {result.total_exec_time:0.3f}s')
 
         # Save results to a file.
-        write_result(mkfile(instance.output_dir(output_path), "results.json"), result)
+        write_json(instance.results_file(results_path), result)
         
         results_q.put(result, block=True)
 

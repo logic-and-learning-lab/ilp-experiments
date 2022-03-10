@@ -1,4 +1,4 @@
-from .problem import Problem, ProblemInstance, instance_path, instance_name
+from .problem import Problem, ProblemInstance, calc_instance_data_path, instance_name
 from .trains import DEFAULT_TRAINS_PROBLEMS, ALL_TRAINS_PROBLEMS
 from .list import DEFAULT_LIST_PROBLEMS, ALL_LIST_PROBLEMS
 from .iggp import DEFAULT_IGGP_PROBLEMS, ALL_IGGP_PROBLEMS

@@ -3,33 +3,34 @@ from ilpexp.experiment import Experiment
 from ilpexp.system import Popper, Aleph, Metagol, BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL
 from os.path import exists
 
-BASE_PATH = "test-results"
+DATA_PATH = "test-data"
 
 def test_init():
     assert BUTTONS.name == "iggp-buttons"
     assert BUTTONS.subdir == "buttons"
 
-#TODO(Brad): I probably need to set up a temprorary directory for these files
+#TODO(Brad): I probably need to set up a temporary directory for these files
 def test_gen():
-    experiment = Experiment(BASE_PATH, BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL])
-    instances = BUTTONS.generate_instances(experiment)
+    experiment = Experiment(BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], trials=1)
+    instances = BUTTONS.generate_instances(experiment, DATA_PATH)
 
     assert len(instances) == 3
     popper = aleph = metagol = None
     for instance in instances:
-        if isinstance(instance.system, Popper):
+        system = experiment.get_system(instance.system_id)
+        if isinstance(system, Popper):
             popper = instance
-        elif isinstance(instance.system, Aleph):
+        elif isinstance(system, Aleph):
             aleph = instance
-        elif isinstance(instance.system, Metagol):
+        elif isinstance(system, Metagol):
             metagol = instance
     
     assert popper is not None
     assert aleph is not None
     assert metagol is not None
 
-    assert popper.problem == BUTTONS
-    assert popper.train_settings.stats_file == f"{BASE_PATH}/iggp-buttons/popper/stats.json"
+    assert popper.problem_name == BUTTONS.name
+    assert popper.train_settings.stats_file == f"{DATA_PATH}/iggp-buttons/popper/stats.json"
     assert exists(popper.train_settings.exs_file)
     assert exists(popper.train_settings.bk_file)
     assert exists(popper.train_settings.bias_file)
@@ -41,19 +42,22 @@ def test_gen():
     assert exists(metagol.train_settings.prim_file)
 
 def test_trials():
-    experiment = Experiment(BASE_PATH, BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], trials=3)
+    experiment = Experiment(BUTTONS, [BASIC_POPPER, BASIC_ALEPH, BASIC_METAGOL], trials=3)
 
-    instances = BUTTONS.generate_instances(experiment)
+    instances = BUTTONS.generate_instances(experiment, DATA_PATH)
     assert len(instances) == 9
 
     popper = None
     for instance in instances:
-        if isinstance(instance.system, Popper):
+        system = experiment.get_system(instance.system_id)
+        if isinstance(system, Popper):
             popper = instance
             break
         
     assert popper is not None
-    assert popper.train_settings.stats_file == f"{BASE_PATH}/iggp-buttons/popper/{popper.trial}/stats.json"
+    # TODO (Brad): Maybe this file should be in the results_path rather than the data_path. For now I'm keeping it how it is
+    # because it should work and it's a bit annoying to change 
+    assert popper.train_settings.stats_file == f"{DATA_PATH}/iggp-buttons/popper/{popper.trial}/stats.json"
     
 
 

@@ -21,15 +21,16 @@ def mkfile(base_path, rel_path):
 def current_dir(file=None):
     if file is None:
         return current_dir(inspect.stack()[1].filename)
-    return os.path.dirname(os.path.abspath(file))
+    return os.path.dirname(os.path.relpath(file))
 
 def curr_dir_relative(filename):
     return os.sep.join([current_dir(inspect.stack()[1].filename), filename])
 
+def configure_logging(level=logging.INFO):
+    logging.basicConfig(level=level, format='%(message)s')
+
 def get_logger():
-    # TODO(Brad): Configure this somehow
-    logging.basicConfig(level=logging.INFO, format='%(message)s')
-    return logging.getLogger("popperexperiments")
+    return logging.getLogger("ilp-experiments")
 
 def call_prolog(action, files_to_load=[], timeout=None):
     args = ["-g", action, "-t", "halt", "-q"]
@@ -91,12 +92,12 @@ def run_command(cmd, args, timeout = None):
 
     if proc.stdout:
         result = proc.stdout
-        logger.debug(result)
+        logger.info(f"run_command stdout: {result}")
     else:
         result = ""
 
     if proc.stderr:
-        logger.debug(proc.stderr)
+        logger.error(f"run_command stderr: {proc.stderr}")
 
     if proc.returncode < 0:
         raise CalledProcessError(proc.returncode, cmd, proc.stdout + proc.stderr)

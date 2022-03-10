@@ -1,7 +1,7 @@
 import os
 import random
 
-from .. import Problem, ProblemInstance, instance_path
+from .. import Problem, ProblemInstance, calc_instance_data_path
 from ...util import mkdir, mkfile, curr_dir_relative
 from ...system import *
 
@@ -18,7 +18,7 @@ class TrainsProblem(Problem):
         self.index = index
         self.source_examples_file = os.sep.join([curr_dir_relative("examples"), f"{index}.pl"])
 
-    def generate_instances(self, experiment):
+    def generate_instances(self, experiment, data_path):
         instances = []
 
         pos = []
@@ -40,47 +40,47 @@ class TrainsProblem(Problem):
             train_neg, test_neg = partition(neg)
 
             for system in experiment.systems:
-                data_path = instance_path(experiment.output_path, self, system, trial)
+                instance_data_path = calc_instance_data_path(data_path, self.name, system.id, trial)
 
                 test_settings = BasicTestSettings(
-                    exs_file = self.write_examples(data_path, test_pos, test_neg, name="test_exs.pl"),
+                    exs_file = self.write_examples(instance_data_path, test_pos, test_neg, name="test_exs.pl"),
                     bk_file = self.bk_file()
                 )
 
-                train_exs_file = self.write_examples(data_path, train_pos, train_neg)
+                train_exs_file = self.write_examples(instance_data_path, train_pos, train_neg)
 
                 if isinstance(system, Popper):
-                    train_settings = self.generate_popper(data_path, train_exs_file, 
+                    train_settings = self.generate_popper(instance_data_path, train_exs_file, 
                         curr_dir_relative('popper-bias.pl'))
                 elif isinstance(system, Aleph):
-                    train_settings = self.generate_aleph(data_path, train_pos, train_neg)
+                    train_settings = self.generate_aleph(instance_data_path, train_pos, train_neg)
                 elif isinstance(system, Metagol):
                     train_settings = self.generate_metagol(train_exs_file)
                 
-                instances.append(ProblemInstance(self, system, train_settings, test_settings))
+                instances.append(ProblemInstance(self.name, system.id, train_settings, test_settings, trial=trial))
 
         return instances
     
     def bk_file(self):
         return curr_dir_relative('bk.pl')
 
-    def write_examples(self, data_path, pos_examples, neg_examples, name="exs.pl"):
-        exs_file = mkfile(data_path, name)
+    def write_examples(self, instance_data_path, pos_examples, neg_examples, name="exs.pl"):
+        exs_file = mkfile(instance_data_path, name)
         with open(exs_file, 'w') as f:
             for example in pos_examples + neg_examples:
                 f.write(f'{example}\n')
         return exs_file
 
-    def generate_popper(self, data_path, exs_file, source_bias_file):
+    def generate_popper(self, instance_data_path, exs_file, source_bias_file):
         return PopperTrainSettings(
             exs_file = exs_file,
-            bias_file = popper.generate_bias_file(data_path, source_bias_file),
+            bias_file = popper.generate_bias_file(instance_data_path, source_bias_file),
             bk_file = self.bk_file(),
-            stats_file = os.sep.join([data_path, 'stats.json'])
+            stats_file = os.sep.join([instance_data_path, 'stats.json'])
         )
 
-    def generate_aleph(self, data_path, pos_examples, neg_examples):
-        output_file = mkfile(data_path, 'input.pl')
+    def generate_aleph(self, instance_data_path, pos_examples, neg_examples):
+        output_file = mkfile(instance_data_path, 'input.pl')
         base_aleph_file = curr_dir_relative('aleph-modes.pl')
         bk_file = self.bk_file()
 

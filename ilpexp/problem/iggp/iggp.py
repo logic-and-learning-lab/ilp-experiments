@@ -1,6 +1,6 @@
 import os
 
-from .. import Problem, ProblemInstance, instance_path
+from .. import Problem, ProblemInstance, calc_instance_data_path
 from ...util import mkfile, curr_dir_relative
 from ...system import *
 
@@ -9,7 +9,7 @@ class IGGPProblem(Problem):
         self.name = name
         self.subdir = subdir
 
-    def generate_instances(self, experiment):
+    def generate_instances(self, experiment, data_path):
         source_path = curr_dir_relative(self.subdir)
         instances = []
 
@@ -27,14 +27,14 @@ class IGGPProblem(Problem):
             # It seems like we should always get approx. the same result unless we vary some seed in Clingo. 
 
             for system in experiment.systems:
-                data_path = instance_path(experiment.output_path, self, system, trial)
+                instance_data_path = calc_instance_data_path(data_path, self.name, system.id, trial)
 
                 if isinstance(system, Popper):
                     train_settings = PopperTrainSettings(
                         exs_file=train_exs_file,
                         bk_file=bk_file,
                         bias_file=bias_file,
-                        stats_file = mkfile(data_path, "stats.json")
+                        stats_file = mkfile(instance_data_path, "stats.json")
                     )
                 elif isinstance(system, Aleph):
                     train_settings = AlephTrainSettings(file=os.sep.join([source_path, "aleph.pl"]))
@@ -45,6 +45,6 @@ class IGGPProblem(Problem):
                         prim_file=os.sep.join([source_path, "metagol.pl"])
                     )
                 
-                instances.append(ProblemInstance(self, system, train_settings, test_settings, trial=trial))
+                instances.append(ProblemInstance(self.name, system.id, train_settings, test_settings, trial=trial))
 
         return instances

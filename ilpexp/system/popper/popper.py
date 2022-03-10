@@ -43,8 +43,13 @@ class Popper(System):
         final_settings["--timeout"] = str(self.timeout)
         final_settings["ignore"] = None # TODO(Brad): This shouldn't really be required if everything else is set.
 
+        popper_file = os.sep.join([self.install_dir, 'popper.py'])
+
+        # TODO(Brad): This is bit of a hack for when the directory doesn't exist on aws batch.
+        os.makedirs(train_settings.stats_file[:train_settings.stats_file.rfind("/")], exist_ok=True)
+        
         # We give an arbitrary extra 10 seconds to the Popper run_command so Popper can timeout the result itself.
-        run_command(os.sep.join([self.install_dir, 'popper.py']), final_settings, timeout= self.timeout + 10)
+        run_command(popper_file, final_settings, timeout= self.timeout + 10)
 
         with open(train_settings.stats_file, 'r') as f:
             stats = json.loads(f.read())

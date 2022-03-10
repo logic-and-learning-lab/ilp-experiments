@@ -9,8 +9,10 @@ def gen_pos():
     return f'f({r},{y})'
 
 def gen_neg():
-    x = gen_list(min_len=3)
-    rands = [i for i in x if x.count(i) < 2]
+    rands = []
+    while(len(rands) < 1):
+        x = gen_list(min_len=3)
+        rands = [i for i in x if x.count(i) < 2]
     y = random.choice(rands)
     return f'f({x},{y})'
 

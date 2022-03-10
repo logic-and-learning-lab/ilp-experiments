@@ -1,1 +1,2 @@
-from .simple import SimpleRunner
+from .local import LocalRunner
+from .awsbatch import AWSBatchRunner

@@ -1,7 +1,7 @@
 import os
 import random
 
-from .. import Problem, ProblemInstance, instance_path
+from .. import Problem, ProblemInstance, calc_instance_data_path
 from ...util import mkdir, mkfile, curr_dir_relative
 from ...system import *
 
@@ -32,7 +32,7 @@ class ListProblem(Problem):
         self.sub_dir = sub_dir
         self.num_examples = num_examples
 
-    def generate_instances(self, experiment):
+    def generate_instances(self, experiment, data_path):
         instances = []
 
         for trial in experiment.trials:
@@ -43,25 +43,25 @@ class ListProblem(Problem):
             neg_test_examples = gen_examples(self.num_examples[3], self.gen_neg)
 
             for system in experiment.systems:
-                data_path = instance_path(experiment.output_path, self, system, trial)
+                instance_data_path = calc_instance_data_path(data_path, self.name, system.id, trial)
                 test_settings = BasicTestSettings(
-                    exs_file = self.write_examples(mkdir(data_path, 'test'), pos_test_examples, neg_test_examples),
+                    exs_file = self.write_examples(mkdir(instance_data_path, 'test'), pos_test_examples, neg_test_examples),
                     bk_file = self.bk_file()
                 )
 
                 if isinstance(system, Popper):
-                    train_settings = self.generate_popper(data_path, pos_train_examples, neg_train_examples)
+                    train_settings = self.generate_popper(instance_data_path, pos_train_examples, neg_train_examples)
                 elif isinstance(system, Aleph):
-                    train_settings = self.generate_aleph(data_path, pos_train_examples, neg_train_examples)
+                    train_settings = self.generate_aleph(instance_data_path, pos_train_examples, neg_train_examples)
                 elif isinstance(system, Metagol):
-                    train_settings = self.generate_metagol(data_path, pos_train_examples, neg_train_examples)
+                    train_settings = self.generate_metagol(instance_data_path, pos_train_examples, neg_train_examples)
                 
-                instances.append(ProblemInstance(self, system, train_settings, test_settings, trial=trial))
+                instances.append(ProblemInstance(self.name, system.id, train_settings, test_settings, trial=trial))
 
         return instances
     
-    def write_examples(self, data_path, pos_examples, neg_examples):
-        exs_file = mkfile(data_path, 'exs.pl')
+    def write_examples(self, instance_data_path, pos_examples, neg_examples):
+        exs_file = mkfile(instance_data_path, 'exs.pl')
         with open(exs_file, 'w') as f:
             for example in pos_examples:
                 f.write(f'pos({example}).\n')
@@ -74,20 +74,20 @@ class ListProblem(Problem):
 
     ### POPPER
 
-    def generate_popper(self, data_path, pos_examples, neg_examples):
+    def generate_popper(self, instance_data_path, pos_examples, neg_examples):
         return PopperTrainSettings(
-            exs_file = self.write_examples(data_path, pos_examples, neg_examples),
+            exs_file = self.write_examples(instance_data_path, pos_examples, neg_examples),
             bias_file = popper.generate_bias_file(
-                data_path, 
+                instance_data_path, 
                 curr_dir_relative('popper-bias.pl'),
                 curr_dir_relative(os.sep.join([self.sub_dir, 'popper-bias.pl']))),
             bk_file = self.bk_file(),
-            stats_file = os.sep.join([data_path, 'stats.json'])
+            stats_file = os.sep.join([instance_data_path, 'stats.json'])
         )
 
     ### ALEPH
-    def generate_aleph(self, data_path, pos_examples, neg_examples):
-        output_file = mkfile(data_path, 'input.pl')
+    def generate_aleph(self, instance_data_path, pos_examples, neg_examples):
+        output_file = mkfile(instance_data_path, 'input.pl')
         base_aleph_file = curr_dir_relative('aleph-modes.pl')
         problem_aleph_file = curr_dir_relative(os.sep.join([self.sub_dir, 'aleph.pl']))
         bk_file = curr_dir_relative('bk.pl')
@@ -101,9 +101,9 @@ class ListProblem(Problem):
             problem_aleph_file)
 
     ### METAGOL
-    def generate_metagol(self, data_path, pos_examples, neg_examples):
+    def generate_metagol(self, instance_data_path, pos_examples, neg_examples):
         return MetagolTrainSettings(
-            exs_file = self.write_examples(data_path, pos_examples, neg_examples),
+            exs_file = self.write_examples(instance_data_path, pos_examples, neg_examples),
             prim_file = curr_dir_relative('metagol-prims.pl'),
             bk_file = self.bk_file(),
             metarules = METARULES_RECURSIVE

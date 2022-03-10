@@ -1,5 +1,8 @@
+# Temporary data created by tests and experiments
 results/
-test_results/
+test-results/
+data/
+test-data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
