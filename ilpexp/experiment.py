@@ -1,9 +1,9 @@
 from re import S
 from .problem import ALL_PROBLEMS, DEFAULT_PROBLEMS, DEFAULT_LIST_PROBLEMS, DEFAULT_TRAINS_PROBLEMS, DEFAULT_IGGP_PROBLEMS
 from .system import BASIC_POPPER, ALL_BASIC_SYSTEMS, Popper, Metagol, Aleph
-from .problem.trains import TRAINS1, TRAINS2
-from .problem.list import DROP_K
-from .problem.iggp import BUTTONS
+from .problem.trains import TRAINS1, TRAINS2, TRAINS3
+from .problem.list import DROP_K, FIND_DUP, SORTED
+from .problem.iggp import BUTTONS, MINIMAL_DECAY, RPS
 
 class Experiment:
     def __init__(self, problems=DEFAULT_PROBLEMS, systems=[BASIC_POPPER], trials=20):
@@ -105,4 +105,33 @@ MULTI_POPPER_EXAMPLE = Experiment(
         Aleph(),
         Metagol()
     ]
+)
+
+def parallel_systems():
+    systems = [Popper(id="popper_non-parallel_1")]
+    for strategy in ["portfolio", "dac", "portfolio-no-comm", "dac-no-comm"]:
+        for threads in [1, 2, 4, 6, 8]:
+            systems.append(
+                Popper(
+                    settings={
+                        '--num-threads': str(threads),
+                        '--worker-strategy': strategy,
+                    },
+                    id=f'popper_{strategy}_{threads}'
+                ))
+    return systems
+
+def parallel_problems():
+    return [TRAINS3, DROP_K, SORTED, FIND_DUP, MINIMAL_DECAY, RPS]
+
+PARALLEL_ONE_TRIAL = Experiment(
+    problems=parallel_problems(),
+    systems=parallel_systems(),
+    trials=1
+)
+
+PARALLEL = Experiment(
+    problems=parallel_problems(),
+    systems=parallel_systems(),
+    trials=5
 )

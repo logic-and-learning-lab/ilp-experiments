@@ -79,7 +79,7 @@ class LocalRunner:
     def run_instance(self, experiment, results_path, instance, sema, results_q):
         
         # Change this if you need debug info in the threads.
-        configure_logging(logging.ERROR)
+        configure_logging(logging.DEBUG)
 
         logger = get_logger()
         logger.info(f'\nRunning {instance.name}')

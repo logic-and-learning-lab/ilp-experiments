@@ -51,15 +51,18 @@ class Popper(System):
         # We give an arbitrary extra 10 seconds to the Popper run_command so Popper can timeout the result itself.
         run_command(popper_file, final_settings, timeout= self.timeout + 10)
 
-        with open(train_settings.stats_file, 'r') as f:
-            stats = json.loads(f.read())
+        if os.path.exists(train_settings.stats_file):
+            with open(train_settings.stats_file, 'r') as f:
+                stats = json.loads(f.read())
+        else:
+            stats = None
         
         code = None
         total_exec_time = self.timeout
         if stats:
             solution = stats["solution"]
+            total_exec_time = stats["total_exec_time"]
             if solution:
-                total_exec_time = solution["total_exec_time"]
                 code = solution["code"] if solution["is_solution"] else None
 
         return (code, total_exec_time, stats)

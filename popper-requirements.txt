@@ -1,0 +1,4 @@
+pyswip
+clingo
+pyzmq
+msgpack

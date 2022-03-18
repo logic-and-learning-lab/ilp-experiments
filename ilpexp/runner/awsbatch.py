@@ -20,8 +20,8 @@ RESULTS_PATH = "results"
 
 class AWSBatchRunner:
     def run(self, experiment, experiment_name, extra_dirs, bucket_name):
-        # TODO (Brad): Parameterize?
-        queue = "ilp-batch"
+        # TODO (Brad): Changed for parallel
+        queue = "ilp-batch-parallel"
         batch_id = self.generate_batch_id()
 
         get_logger().info(f"Generating instance data. Batch ID is {batch_id}")
@@ -103,9 +103,9 @@ class AWSBatchRunner:
         get_logger().info("Submitting prep-data job")
 
         return batch_client.submit_job(
-            jobName = f"ilp-batch-prep-data-{batch_id}",
+            jobName = f"ilp-batch-parallel-prep-data-{batch_id}",
             jobQueue = queue,
-            jobDefinition = "ilp-batch-prep-data",
+            jobDefinition = "ilp-batch-parallel-prep-data",
             containerOverrides = {
                 # This is a bit of a stupid hack but if the prep job has to download and unzip the source then we need another file already in docker to tell it how to do that.
                 "command": ["python3", "awsbatch_data_prep.py", batch_id, bucket_name],
@@ -116,9 +116,10 @@ class AWSBatchRunner:
         get_logger().info("Submitting run-instance job")
 
         return batch_client.submit_job(
-            jobName = f"ilp-batch-run-instance-{batch_id}",
+            jobName = f"ilp-batch-parallel-run-instance-{batch_id}",
             jobQueue = queue,
-            jobDefinition = "ilp-batch-run-instance",
+            # TODO (Brad): Changed for parallel
+            jobDefinition = "ilp-batch-parallel-run-instance",
             dependsOn = [
                 {"jobId": prep_job_id}
             ],
@@ -132,9 +133,9 @@ class AWSBatchRunner:
 
     def _submit_merge_results_job(self, batch_client, batch_id, bucket_name, queue, instance_job_id, experiment_name):
         return batch_client.submit_job(
-            jobName = f"ilp-batch-merge-results-{batch_id}",
+            jobName = f"ilp-batch-parallel-merge-results-{batch_id}",
             jobQueue = queue,
-            jobDefinition = "ilp-batch-merge-results",
+            jobDefinition = "ilp-batch-parallel-merge-results",
             dependsOn = [
                 {"jobId": instance_job_id}
             ],

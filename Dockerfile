@@ -17,9 +17,8 @@ RUN swipl -g "pack_install(aleph, [interactive(false)]), halt"
 # Install the AWS SDK we need to submit jobs.
 RUN pip install boto3
 
-# Clone Popper and install its requirements then delete it. We don't actually want Popper in this image. 
-# The Popper and ilp-experiments repos will be downloaded from s3 at runtime and put on efs.
-RUN git clone https://github.com/logic-and-learning-lab/Popper.git && pip install -r Popper/requirements.txt && rm -rf Popper/ 
+COPY popper-requirements.txt popper-requirements.txt
+RUN pip install -r popper-requirements.txt && rm popper-requirements.txt
 
 # TODO (Brad): Remove this and pull it from the live repo once it's actually merged.
 COPY ./awsbatch_data_prep.py awsbatch_data_prep.py
