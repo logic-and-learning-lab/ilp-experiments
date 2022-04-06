@@ -6,7 +6,8 @@ import os
 RE = "<PROG>\n(.*)<\/PROG>"
 CMD = "induce(P),writeln('<PROG>'),numbervars(P,0,_),foreach(member(C,P),(write(C),write('. '))),writeln('</PROG>')"
 
-def gen_aleph_train_settings(output_file, base_aleph_file, bk_file, pos_examples, neg_examples, problem_aleph_file=None):
+def gen_aleph_train_settings(output_file, base_aleph_file, bk_file, pos_examples, neg_examples,
+                             problem_aleph_file=None, additional_bk=None):
     with open(base_aleph_file, 'r') as tmp:
             base_aleph = tmp.read()
         
@@ -26,6 +27,10 @@ def gen_aleph_train_settings(output_file, base_aleph_file, bk_file, pos_examples
         
         f.write(':-begin_bg.\n')
         f.write(bk_aleph + '\n')
+
+        if additional_bk:
+            f.write(additional_bk)
+
         f.write(':-end_bg.\n')
         
         f.write(':-begin_in_pos.\n')
