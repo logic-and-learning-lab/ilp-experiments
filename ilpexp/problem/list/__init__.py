@@ -24,6 +24,7 @@ REVERSE = Reverse()
 SORTED = Sorted()
 SUM_LIST = SumList()
 THREE_SAME = ThreeSame()
+NEXT = Next()
 
 DEFAULT_LIST_PROBLEMS = [
         DROP_K,

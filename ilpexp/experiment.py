@@ -4,6 +4,9 @@ from .system import BASIC_POPPER, ALL_BASIC_SYSTEMS, Popper, Metagol, Aleph
 from .problem.trains import TRAINS1
 from .problem.list import DROP_K
 from .problem.iggp import BUTTONS
+from .problem.list import DROP_K, NEXT
+from .problem.iggp import BUTTONS, ATTRITION, BUTTONS_GOAL
+from .problem.krk import KRKProblem
 
 DEFAULT_OUTPUT_PATH='./results'
 
