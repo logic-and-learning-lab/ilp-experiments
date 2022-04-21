@@ -7,6 +7,8 @@ from .problem.iggp import BUTTONS
 from .problem.list import DROP_K, NEXT
 from .problem.iggp import BUTTONS, ATTRITION, BUTTONS_GOAL
 from .problem.krk import KRKProblem
+from .problem.carcinogenesis import CARCINOGENESIS_PROBLEM
+from .problem.alzheimer import ALZHEIMER_PROBLEMS
 
 DEFAULT_OUTPUT_PATH='./results'
 
