@@ -41,6 +41,11 @@ If you'd like to add a system, see the comments in `system/system.py`. You can a
   * Three Same
 * Michalski Trains:
   * Trains 1-4. Four different variations on the trains problem.
+* Pharmacophore: Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.
+* Carcinogenesis: Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
+* Mutagenesis: Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
+* Alzheimer: King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
+
 
 If you'd like to add more problems, see `problem/problem.py` or again add an issue or reach out to me (Brad) on discord. Adding individual problems to the existing types (iggp, list or trains) should be pretty straight forward. Adding a different type is a bit more complex.
 

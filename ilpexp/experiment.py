@@ -10,6 +10,7 @@ from .problem.krk import KRKProblem
 from .problem.carcinogenesis import CARCINOGENESIS_PROBLEM
 from .problem.alzheimer import ALZHEIMER_PROBLEMS
 from .problem.mutagenesis import MUTAGENESIS_PROBLEM
+from .problem.pharmacophore import PHARMACOPHORE_PROBLEM
 
 DEFAULT_OUTPUT_PATH='./results'
 
