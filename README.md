@@ -45,6 +45,7 @@ If you'd like to add a system, see the comments in `system/system.py`. You can a
 * Carcinogenesis: Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
 * Mutagenesis: Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
 * Alzheimer: King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
+* List Higher-order: Purgał, S. J., Cerna, D. M., & Kaliszyk, C. (2021). Learning Higher-Order Programs without Meta-Interpretive Learning. arXiv preprint arXiv:2112.14603.
 
 
 If you'd like to add more problems, see `problem/problem.py` or again add an issue or reach out to me (Brad) on discord. Adding individual problems to the existing types (iggp, list or trains) should be pretty straight forward. Adding a different type is a bit more complex.
