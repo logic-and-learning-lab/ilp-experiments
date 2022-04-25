@@ -9,6 +9,9 @@ from .problem.iggp import BUTTONS, ATTRITION, BUTTONS_GOAL
 from .problem.krk import KRKProblem
 from .problem.carcinogenesis import CARCINOGENESIS_PROBLEM
 from .problem.alzheimer import ALZHEIMER_PROBLEMS
+from .problem.mutagenesis import MUTAGENESIS_PROBLEM
+from .problem.pharmacophore import PHARMACOPHORE_PROBLEM
+from .problem.listHigherOrder import DEFAULT_LIST_HO_PROBLEMS
 
 DEFAULT_OUTPUT_PATH='./results'
 
