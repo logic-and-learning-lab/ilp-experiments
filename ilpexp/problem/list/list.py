@@ -13,9 +13,9 @@ DEFAULT_NUM_EXAMPLES = [NUM_TRAIN_EXAMPLES, NUM_TRAIN_EXAMPLES, NUM_TEST_EXAMPLE
 MAX_LIST_SIZE = 50
 MAX_ELEMENT = 100
 
-def gen_list(min_len=1):
-    n = random.randint(min_len, MAX_LIST_SIZE+1)
-    return [random.randint(1, MAX_ELEMENT+1) for _ in range(n)]
+def gen_list(min_len=1, max_len=MAX_LIST_SIZE, min_element=1, max_element=MAX_ELEMENT):
+    n = random.randint(min_len, max_len+1)
+    return [random.randint(min_element, max_element+1) for _ in range(n)]
 
 def gen_examples(i, fn):
         return [fn() for _ in range(i)]

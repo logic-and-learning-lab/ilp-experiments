@@ -54,3 +54,6 @@ direction(zero,(out,)).
 
 type(sum,(element,element,element)).
 direction(sum,(in,in,out)).
+
+type(mult,(element,element,element)).
+direction(mult,(in,in,out)).
