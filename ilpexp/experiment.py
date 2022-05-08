@@ -12,6 +12,7 @@ from .problem.alzheimer import ALZHEIMER_PROBLEMS
 from .problem.mutagenesis import MUTAGENESIS_PROBLEM
 from .problem.pharmacophore import PHARMACOPHORE_PROBLEM
 from .problem.listHigherOrder import DEFAULT_LIST_HO_PROBLEMS
+from .problem.strings import DEFAULT_STRING_PROBLEMS
 
 DEFAULT_OUTPUT_PATH='./results'
 

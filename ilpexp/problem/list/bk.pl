@@ -2,23 +2,43 @@ is_list([]).
 is_list([_|_]).
 
 increment(A,B):-
-    (nonvar(A) -> \+ is_list(A); true),
-    (nonvar(B) -> \+ is_list(B); true),
+    (nonvar(A) -> integer(A); true),
+    (nonvar(B) -> integer(A); true),
     succ(A,B).
 
 decrement(A,B):-
-    (nonvar(A) -> \+ is_list(A); true),
-    (nonvar(B) -> \+ is_list(B); true),
+    (nonvar(A) -> integer(A); true),
+    (nonvar(B) -> integer(A); true),
     succ(B,A).
 
 my_length(A,B):-
     (nonvar(A) -> is_list(A); true),
-    (nonvar(B) -> \+is_list(B); true),
+    (nonvar(B) -> integer(B); true),
     length(A,B).
+
+ord(A,B) :-
+    nonvar(B),!,
+    integer(B),
+    between(97,122,B),
+    atom_codes(A,[B]).
+
+ord(A,B) :-
+    nonvar(A),
+    atom(A),
+    (var(B);integer(B)),
+    between(97,122,B),
+    atom_codes(A,[B]).
 
 cons(A,B,C):-
     append([A],B,C).
 comps([H|T],H,T).
+
+max(A,B,A) :- nonvar(A), nonvar(B), A>= B,!.
+max(_,B,B).
+
+min(A,B,A) :- nonvar(A), nonvar(B), A=< B,!.
+min(_,B,B).
+
 
 tail([_|T],T).
 head([H|_],H).
@@ -27,6 +47,11 @@ sum(A,B,C):-
     (nonvar(B) -> \+ is_list(B); true),
     (nonvar(C) -> \+ is_list(B); true),
     C is A+B.
+mult(A,B,C):-
+    (nonvar(A) -> \+ is_list(A); true),
+    (nonvar(B) -> \+ is_list(B); true),
+    (nonvar(C) -> \+ is_list(B); true),
+    C is A*B.
 empty([]).
 
 element([X|_],X):-!.
@@ -38,28 +63,32 @@ empty_out([]).
 
 zero(0).
 one(1).
+negative(A) :- nonvar(A), A<0.
+positive(A) :- nonvar(A), A>=0.
 
 gt(A,B):-
     nonvar(A),
     nonvar(B),
-    \+is_list(A),
-    \+is_list(B),
+    integer(A),
+    integer(B),
     A > B.
 
 geq(A,B):-
     nonvar(A),
     nonvar(B),
-    \+is_list(A),
-    \+is_list(B),
+    integer(A),
+    integer(B),
     A >= B.
 
 even(A):-
     nonvar(A),
+    integer(A),
     \+ is_list(A),
     0 is A mod 2.
 
 odd(A):-
     nonvar(A),
+    integer(A),
     \+ is_list(A),
     1 is A mod 2.
 
