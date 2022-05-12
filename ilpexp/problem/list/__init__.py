@@ -28,6 +28,8 @@ from .lastbutone.lastbutone import LastButOne
 from .replace.replace import Replace
 from .counteven.counteven import CountEven
 from .countpositive.countpositive import CountPositive
+from .sublist.sublist import Sublist
+from .appendlist.appendlist import AppendList
 
 ADD_HEAD = AddHead()
 DROP_K = DropK()
@@ -58,6 +60,8 @@ LASTBUTONE = LastButOne()
 REPLACE = Replace()
 COUNTEVEN = CountEven()
 COUNTPOSITIVE = CountPositive()
+SUBLIST = Sublist()
+APPENDLIST = AppendList()
 
 DEFAULT_LIST_PROBLEMS = [
         DROP_K,
