@@ -20,13 +20,13 @@ If you'd like to add a system, see the comments in `system/system.py`. You can a
 ### Problems
 `Problems` are ILP problems that can be solved by ILP systems. Currently the following `problems` are working:
 
-* Inductive General Game Playing (IGGP):
+* Inductive General Game Playing (IGGP) [1]:
   * Buttons
   * Coins
   * Minimal Decay
   * Rainbow
   * RPS
-* List Transformations:
+* List Transformations [2,3,4]:
   * Add Head
   * Drop K
   * Drop Last
@@ -39,14 +39,15 @@ If you'd like to add a system, see the comments in `system/system.py`. You can a
   * Sorted
   * Sum List
   * Three Same
-* Michalski Trains:
+  * ...
+* Rook protected in chess KRK endgame [5]
+* Michalski Trains [6]:
   * Trains 1-4. Four different variations on the trains problem.
-* Pharmacophore: Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.
-* Carcinogenesis: Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
-* Mutagenesis: Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
-* Alzheimer: King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
-* List Higher-order: Purgał, S. J., Cerna, D. M., & Kaliszyk, C. (2021). Learning Higher-Order Programs without Meta-Interpretive Learning. arXiv preprint arXiv:2112.14603.
-
+* Pharmacophore [7]
+* Carcinogenesis [8] 
+* Mutagenesis [9]
+* Alzheimer [10]
+* Protein-hexose binding [11]
 
 If you'd like to add more problems, see `problem/problem.py` or again add an issue or reach out to me (Brad) on discord. Adding individual problems to the existing types (iggp, list or trains) should be pretty straight forward. Adding a different type is a bit more complex.
 
@@ -100,3 +101,16 @@ Right now you configure experiments by editing source code to add details of the
 ### More problems and systems
 It would be great to add more problems and support more systems. The best way for this to happen is for people to add them when they need them for their experiments. 
 
+
+### References
+[1] Cropper, A.; Evans, R.; and Law, M. 2020. Inductive general game playing. Machine Learning, (7): 1393–1434.
+[2] Cropper, A.; and Morel, R. 2021. Learning programs by learning from failures. Machine Learning., (4): 801–856.
+[3] Ahlgren, J., & Yuen, S. Y. (2013). Efficient program synthesis using constraint satisfaction in inductive logic programming. The Journal of Machine Learning Research, 14(1), 3649-3682.
+[4] Purgał, S. J., Cerna, D. M., & Kaliszyk, C. Learning Higher-Order Logic Programs From Failures.
+[5] Hocquette, C., & Muggleton, S. H. (2021, January). Complete bottom-up predicate invention in meta-interpretive learning. In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence (pp. 2312-2318).
+[6] Larson, J.; and Michalski, R. S. 1977. Inductive inference of VL decision rules. SIGART Newsletter, 38–44.
+[7] Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.
+[8] Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
+[9] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
+[10] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
+[11] A Santos, J. C., Nassif, H., Page, D., Muggleton, S. H., & E Sternberg, M. J. (2012). Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13(1), 1-11.
