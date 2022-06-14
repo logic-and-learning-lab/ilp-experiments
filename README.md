@@ -103,14 +103,15 @@ It would be great to add more problems and support more systems. The best way fo
 
 
 ### References
-[1] Cropper, A.; Evans, R.; and Law, M. 2020. Inductive general game playing. Machine Learning, (7): 1393–1434.
-[2] Cropper, A.; and Morel, R. 2021. Learning programs by learning from failures. Machine Learning., (4): 801–856.
-[3] Ahlgren, J., & Yuen, S. Y. (2013). Efficient program synthesis using constraint satisfaction in inductive logic programming. The Journal of Machine Learning Research, 14(1), 3649-3682.
-[4] Purgał, S. J., Cerna, D. M., & Kaliszyk, C. Learning Higher-Order Logic Programs From Failures.
-[5] Hocquette, C., & Muggleton, S. H. (2021, January). Complete bottom-up predicate invention in meta-interpretive learning. In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence (pp. 2312-2318).
-[6] Larson, J.; and Michalski, R. S. 1977. Inductive inference of VL decision rules. SIGART Newsletter, 38–44.
-[7] Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.
-[8] Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
-[9] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
-[10] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
-[11] A Santos, J. C., Nassif, H., Page, D., Muggleton, S. H., & E Sternberg, M. J. (2012). Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13(1), 1-11.
+
+- [1] Cropper, A.; Evans, R.; and Law, M. 2020. Inductive general game playing. Machine Learning, (7): 1393–1434.
+- [2] Cropper, A.; and Morel, R. 2021. Learning programs by learning from failures. Machine Learning., (4): 801–856.
+- [3] Ahlgren, J., & Yuen, S. Y. (2013). Efficient program synthesis using constraint satisfaction in inductive logic programming. The Journal of Machine Learning Research, 14(1), 3649-3682.
+- [4] Purgał, S. J., Cerna, D. M., & Kaliszyk, C. Learning Higher-Order Logic Programs From Failures.
+- [5] Hocquette, C., & Muggleton, S. H. (2021, January). Complete bottom-up predicate invention in meta-interpretive learning. In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence (pp. 2312-2318).
+- [6] Larson, J.; and Michalski, R. S. 1977. Inductive inference of VL decision rules. SIGART Newsletter, 38–44.
+- [7] Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.
+- [8] Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.
+- [9] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).
+- [10] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.
+- [11] A Santos, J. C., Nassif, H., Page, D., Muggleton, S. H., & E Sternberg, M. J. (2012). Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13(1), 1-11.
