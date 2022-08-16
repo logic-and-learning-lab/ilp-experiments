@@ -17,8 +17,6 @@ ROOK = 'r'
 KING = 'k'
 TYPES = [ROOK, KING]
 
-DISTANCE = 1
-
 MIN_BOARD = 1
 MAX_BOARD = 8
 
@@ -29,87 +27,16 @@ def gen_examples(i, j, fn):
     return list(zip(*[fn(k) for k in range(i, j)]))
 
 
-def generate_pos_example(i):
-    bk_pos = generate_pos_bk(i)
-    return f"f({i})", bk_pos
-
-
-def generate_neg_example(i):
-    bk_neg = generate_neg_bk(i)
-    return f"f({i})", bk_neg
-
-
-def generate_pos_bk(i):
-    file1 = random.randrange(MIN_BOARD, MAX_BOARD+1)
-    rank1 = random.randrange(MIN_BOARD, MAX_BOARD+1)
-    (rank2, file2) = random_position_different_from([(rank1, file1)])
-    (rank3, file3) = random_position_different_from_distance_1([(rank1, file1), (rank2, file2)], (rank1, file1))
-    return f"cell({i},[{rank1}, {file1}], w, r).\n" \
-           + f"cell({i},[{rank2}, {file2}], b, k).\n" \
-           + f"cell({i},[{rank3}, {file3}], w, k).\n"
-
-
-def generate_neg_bk(i):
-    rank1, file1, color1, type1 = generate_piece_neg_example([], [], [])
-    wr, wk = add_to_existing_pieces([], [], rank1, file1, color1, type1)
-    rank2, file2, color2, type2 = generate_piece_neg_example([(rank1, file1)], wr, wk)
-    wr, wk = add_to_existing_pieces(wr, wk, rank2, file2, color2, type2)
-    rank3, file3, color3, type3 = generate_piece_neg_example([(rank1, file1), (rank2, file2)], wr, wk)
-
-    return f"cell({i},[{rank1}, {file1}], {color1}, {type1}).\n" \
-           + f"cell({i},[{rank2}, {file2}], {color2}, {type2}).\n"\
-           + f"cell({i},[{rank3}, {file3}], {color3}, {type3}).\n"
-
-
-def generate_piece_neg_example(other_pieces, wr, wk):
-    piece_color = random.choice(COLORS)
-    piece_type = random.choice(TYPES)
-    if (piece_color, piece_type) == (WHITE, ROOK):
-        (rank, file) = random_position_different_from_distance_geq_1(other_pieces, wk)
-    elif (piece_color, piece_type) == (WHITE, KING):
-        (rank, file) = random_position_different_from_distance_geq_1(other_pieces, wr)
-    else:
-        (rank, file) = random_position_different_from(other_pieces)
-    return rank, file, piece_color, piece_type
-
-
-def add_to_existing_pieces(wr, wk, rank, file, piece_color, piece_type):
-    if (piece_color, piece_type) == (WHITE, ROOK):
-        wr += [(rank, file)]
-    elif (piece_color, piece_type) == (WHITE, KING):
-        wk += [(rank, file)]
-    return wr, wk
-
-
-def random_position_different_from(pieces):
-    return random.choice([(i, j) for i in range(MIN_BOARD, MAX_BOARD+1) for j in range(MIN_BOARD, MAX_BOARD+1)
-                          if (i, j) not in pieces])
-
-
-def random_position_different_from_distance_1(pieces, position):
-    (rank, file) = position
-    return random.choice([(i, j) for i in [rank - 1, rank, rank + 1] for j in [file - 1, file, file + 1]
-                          if (i, j) not in pieces and MIN_BOARD <= i <= MAX_BOARD and MIN_BOARD <= j <= MAX_BOARD])
-
-
-def random_position_different_from_distance_geq_1(pieces, positions):
-    return random.choice([(i, j) for i in range(MIN_BOARD, MAX_BOARD+1) for j in range(MIN_BOARD, MAX_BOARD+1)
-                          if ((i, j) not in pieces and all([distance(i, j, a, b) > DISTANCE for (a, b) in positions]))])
-
-
-def distance(rank1, file1, rank2, file2):
-    return max([abs(rank1-rank2), abs(file1-file2)])
-
-
 class KRKProblem(Problem):
     
     # num_examples is an array of four numbers: the number of positive and negative training examples
     # followed by the number of positive and negative testing examples.
 
-    def __init__(self, num_examples=DEFAULT_NUM_EXAMPLES):
-        super().__init__("krk")
-        self.gen_pos = generate_pos_example
-        self.gen_neg = generate_neg_example
+    def __init__(self, name, gen_pos, gen_neg, sub_dir, num_examples=DEFAULT_NUM_EXAMPLES):
+        super().__init__(name)
+        self.gen_pos = gen_pos
+        self.gen_neg = gen_neg
+        self.sub_dir = sub_dir
         self.num_examples = num_examples
 
     def generate_instances(self, experiment):
@@ -186,18 +113,20 @@ class KRKProblem(Problem):
         return PopperTrainSettings(
             exs_file=exs_file,
             bk_file=bk_file,
-            bias_file=curr_dir_relative(f'popper-bias.pl'),
-            stats_file=os.sep.join([data_path, 'stats.json'])
+            bias_file = popper.generate_bias_file(
+                data_path,
+                curr_dir_relative('popper-bias.pl'),
+                curr_dir_relative(os.sep.join([self.sub_dir, 'popper-bias.pl']))),
+            stats_file = os.sep.join([data_path, 'stats.json'])
         )
 
     # ALEPH
     def generate_aleph(self, data_path, pos_ex, pos_bk, neg_ex, neg_bk):
-
         output_file = mkfile(data_path, 'input.pl')
         base_aleph_file = curr_dir_relative('aleph-modes.pl')
-        bk_file = self.bk_file()
-
-        additional_bk = "".join(pos_bk)+"".join(neg_bk)
+        problem_aleph_file = curr_dir_relative(os.sep.join([self.sub_dir, 'aleph.pl']))
+        bk_file = curr_dir_relative('bk.pl')
+        additional_bk = ''.join(''.join(l) for l in pos_bk+neg_bk)
 
         return aleph.gen_aleph_train_settings(
             output_file, 
@@ -205,14 +134,24 @@ class KRKProblem(Problem):
             bk_file,
             pos_ex,
             neg_ex,
+            problem_aleph_file,
             additional_bk=additional_bk)
+
 
     # METAGOL
     def generate_metagol(self, data_path, pos_ex, pos_bk, neg_ex, neg_bk):
         exs_file = self.write_examples(data_path, pos_ex, neg_ex)
         bk_file = self.write_bk(data_path, pos_bk, neg_bk)
+        prims = os.sep.join([data_path, "prim.pl"])
+        with open(prims, "w+") as f:
+            with open(curr_dir_relative('metagol-prims.pl')) as bias:
+                f.write(bias.read()+"\n")
+            if os.path.exists(curr_dir_relative(os.sep.join([self.sub_dir, 'metagol.pl']))):
+                with open(curr_dir_relative(os.sep.join([self.sub_dir, 'metagol.pl']))) as pb_bias:
+                    f.write(pb_bias.read())
+
         return MetagolTrainSettings(
             exs_file=exs_file,
-            prim_file=curr_dir_relative('metagol-prims.pl'),
+            prim_file=prims,
             bk_file=bk_file
         )
