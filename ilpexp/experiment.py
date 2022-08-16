@@ -13,6 +13,8 @@ from .problem.mutagenesis import MUTAGENESIS_PROBLEM
 from .problem.pharmacophore import PHARMACOPHORE_PROBLEM
 from .problem.listHigherOrder import DEFAULT_LIST_HO_PROBLEMS
 from .problem.strings import DEFAULT_STRING_PROBLEMS
+from .problem.graph import DEFAULT_GRAPH_PROBLEMS
+from .problem.krk import KRK_PROBLEMS
 
 DEFAULT_OUTPUT_PATH='./results'
 
