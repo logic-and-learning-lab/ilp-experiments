@@ -228,6 +228,5 @@ class ZendoProblem(Problem):
         return MetagolTrainSettings(
             exs_file=self.write_examples(data_path, pos_examples, neg_examples),
             prim_file=curr_dir_relative('metagol-prims.pl'),
-            bk_file=self.write_bk(data_path, pos_examples, neg_examples),
-            metarules=METARULES_CONSTANT
+            bk_file=self.write_bk(data_path, pos_examples, neg_examples)
         )
