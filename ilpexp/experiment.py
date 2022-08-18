@@ -15,6 +15,10 @@ from .problem.listHigherOrder import DEFAULT_LIST_HO_PROBLEMS
 from .problem.strings import DEFAULT_STRING_PROBLEMS
 from .problem.graph import DEFAULT_GRAPH_PROBLEMS
 from .problem.krk import KRK_PROBLEMS
+from .problem.imdb import DEFAULT_IMDB_PROBLEMS
+from .problem.list_function import DEFAULT_LISTFUNCTION_PROBLEMS
+
+
 
 DEFAULT_OUTPUT_PATH='./results'
 
