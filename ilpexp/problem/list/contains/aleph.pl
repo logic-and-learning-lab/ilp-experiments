@@ -1,0 +1,36 @@
+:- modeh(*,f(+list)).
+:- modeb(*,f(+list)).
+:- modeb(*,c0(-element)).
+:- modeb(*,c1(-element)).
+:- modeb(*,c2(-element)).
+:- modeb(*,c3(-element)).
+:- modeb(*,c4(-element)).
+:- modeb(*,c5(-element)).
+:- modeb(*,c6(-element)).
+:- modeb(*,c7(-element)).
+:- modeb(*,c8(-element)).
+:- modeb(*,c9(-element)).
+:- modeb(*,c10(-element)).
+
+
+:- determination(f/1,head/2).
+:- determination(f/1,tail/2).
+:- determination(f/1,geq/2).
+:- determination(f/1,empty/1).
+:- determination(f/1,even/1).
+:- determination(f/1,odd/1).
+:- determination(f/1,one/1).
+:- determination(f/1,zero/1).
+:- determination(f/1,decrement/2).
+:- determination(f/1,f/1).
+:- determination(f/1,c0/1).
+:- determination(f/1,c1/1).
+:- determination(f/1,c2/1).
+:- determination(f/1,c3/1).
+:- determination(f/1,c4/1).
+:- determination(f/1,c5/1).
+:- determination(f/1,c6/1).
+:- determination(f/1,c7/1).
+:- determination(f/1,c8/1).
+:- determination(f/1,c9/1).
+:- determination(f/1,c10/1).
