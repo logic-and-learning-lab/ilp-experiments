@@ -4,6 +4,8 @@ test_results/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 **/__pycache__/
+# macOS files
+.DS_Store
 *.py[cod]
 *$py.class
 
