@@ -5,7 +5,7 @@ test_results/
 __pycache__/
 **/__pycache__/
 # macOS files
-.DS_Store
+**/.DS_Store
 *.py[cod]
 *$py.class
 
