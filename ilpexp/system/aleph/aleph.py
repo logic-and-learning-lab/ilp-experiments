@@ -16,9 +16,12 @@ def gen_aleph_train_settings(output_file, base_aleph_file, bk_file, pos_examples
             problem_aleph = tmp.read()
     else:
         problem_aleph = ""
-    
-    with open(bk_file, 'r') as tmp:
-        bk_aleph = tmp.read()
+
+    if bk_file:
+        with open(bk_file, 'r') as tmp:
+            bk_aleph = tmp.read()
+    else:
+        bk_aleph = ""
 
     with open(output_file, 'w') as f:
         f.write(base_aleph + '\n')
