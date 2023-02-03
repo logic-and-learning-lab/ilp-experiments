@@ -50,6 +50,7 @@ If you'd like to add a system, see the comments in `system/system.py`. You can a
 * Protein-hexose binding [11]
 * Graph problems [12]
 * List function problems [13]
+* SQL [14]
 
 If you'd like to add more problems, see `problem/problem.py` or again add an issue or reach out to me (Brad) on discord. Adding individual problems to the existing types (iggp, list or trains) should be pretty straight forward. Adding a different type is a bit more complex.
 
@@ -116,5 +117,6 @@ It would be great to add more problems and support more systems. The best way fo
 [9] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).  
 [10] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.  
 [11] A Santos, J. C., Nassif, H., Page, D., Muggleton, S. H., & E Sternberg, M. J. (2012). Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13(1), 1-11.  
-[12] Learning explanatory rules from noisy data, R. Evans, E. Grefenstette Journal of Artificial Intelligence Research 61, 1-64. 
-[13] https://github.com/joshrule/list_function_250
+[12] Learning explanatory rules from noisy data, R. Evans, E. Grefenstette Journal of Artificial Intelligence Research 61, 1-64.  
+[13] https://github.com/joshrule/list_function_250  
+[14] Provenance-Guided Synthesis of Datalog Programs, M. Raghothaman, J. Mendelson, D. Zhao, M. Naik, B. Scholz.
