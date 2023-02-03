@@ -44,7 +44,10 @@ class Popper(System):
         final_settings["ignore"] = None # TODO(Brad): This shouldn't really be required if everything else is set.
 
         # We give an arbitrary extra 10 seconds to the Popper run_command so Popper can timeout the result itself.
-        run_command(os.sep.join([self.install_dir, 'popper.py']), final_settings, timeout= self.timeout + 10)
+        import sys
+        python_cmd = sys.executable
+        python_file = os.sep.join([self.install_dir, 'popper.py'])
+        run_command([python_cmd, python_file], final_settings, timeout=self.timeout + 10)
 
         with open(train_settings.stats_file, 'r') as f:
             stats = json.loads(f.read())

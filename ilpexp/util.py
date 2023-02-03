@@ -65,7 +65,11 @@ def time_prolog_experiment(action, files_to_load=[], timeout=None):
     return (prog, d.execution_time)
 
 def run_command(cmd, args, timeout = None):
-    final_args = [cmd]
+    if not isinstance(cmd, list):
+        cmd = [cmd]
+
+    final_args = cmd
+
 
     if isinstance(args, dict):
         for (k, v) in args.items():
