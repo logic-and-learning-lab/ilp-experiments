@@ -1,17 +1,19 @@
 import json
 import inspect
 class ExperimentResult:
-    def __init__(self, problem_name, system_name, trial, solution, total_exec_time, conf_matrix, extra_stats):
+    def __init__(self, problem_name, system_id, system_name, trial, solution, total_exec_time, conf_matrix, extra_stats, parameter=None):
         self.problem_name = problem_name
+        self.system_id = system_id,
         self.system_name = system_name
         self.trial = trial
         self.solution = solution
         self.total_exec_time = total_exec_time
         self.extra_stats = extra_stats
         self.conf_matrix = conf_matrix
+        self.parameter = parameter
 
     def __str__(self):
-        return f'{self.problem_name}__{self.system_name} :: {self.total_exec_time:.2f}s :: {self.accuracy}'
+        return f'{self.problem_name}__{self.system_name}__{self.system_id} :: {self.total_exec_time:.2f}s :: {self.accuracy}'
 
     @property
     def accuracy(self):
