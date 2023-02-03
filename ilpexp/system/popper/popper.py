@@ -8,7 +8,7 @@ DEFAULT_TIMEOUT=600
 DEFAULT_INSTALL_DIR='../Popper'
 DEFAULT_SETTINGS={}
 
-def generate_bias_file(data_path, base_bias_file, problem_bias_file=None):
+def generate_bias_file(data_path, base_bias_file, problem_bias_file=None, additional_bias=None):
     with open(base_bias_file, 'r') as f:
         base_bias = f.read()
     
@@ -23,6 +23,8 @@ def generate_bias_file(data_path, base_bias_file, problem_bias_file=None):
         if problem_bias:
             f.write(problem_bias)
         f.write(base_bias)
+        if additional_bias:
+            f.write(additional_bias)
 
     return bias_file
 
