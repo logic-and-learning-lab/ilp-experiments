@@ -89,8 +89,8 @@ class ImdbProblem(Problem):
             output_file, 
             base_aleph_file,
             bk_file,
-            pos_examples, 
-            neg_examples)
+            strip_examples(pos_examples),
+            strip_examples(neg_examples))
 
     # METAGOL
     def generate_metagol(self, data_path, pos_examples, neg_examples):
@@ -99,3 +99,6 @@ class ImdbProblem(Problem):
             prim_file=curr_dir_relative('metagol-prims.pl'),
             bk_file=self.bk_file()
         )
+
+def strip_examples(exs):
+    return [s.strip()[4:-2] for s in exs]
