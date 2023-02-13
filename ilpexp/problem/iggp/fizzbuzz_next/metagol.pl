@@ -1,0 +1,10 @@
+body_pred(int/1).
+body_pred(true_count/2).
+body_pred(true_success/2).
+body_pred(input_say/2).
+body_pred(does_say/3).
+body_pred(role/1).
+body_pred(divisible/2).
+body_pred(less_than/2).
+body_pred(succ/2).
+body_pred(minus/3).

@@ -1,0 +1,11 @@
+body_pred(true_moveCount/2).
+body_pred(true_cell/4).
+body_pred(input_move/5).
+body_pred(does_move/6).
+body_pred(role/1).
+body_pred(add/4).
+body_pred(col/1).
+body_pred(row/1).
+body_pred(knightMove/4).
+body_pred(scoreMap/2).
+body_pred(piece/1).

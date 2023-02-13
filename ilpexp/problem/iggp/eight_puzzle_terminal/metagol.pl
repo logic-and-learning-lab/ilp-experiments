@@ -1,0 +1,9 @@
+body_pred(true_cell/4).
+body_pred(true_step/2).
+body_pred(input_move/3).
+body_pred(role/1).
+body_pred(index/1).
+body_pred(succ/2).
+body_pred(scoremap/2).
+body_pred(successor/2).
+body_pred(tile/1).

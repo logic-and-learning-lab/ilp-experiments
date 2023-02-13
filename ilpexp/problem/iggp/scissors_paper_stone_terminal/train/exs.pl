@@ -1,0 +1,13 @@
+neg(terminal(11)).
+neg(terminal(12)).
+neg(terminal(2)).
+neg(terminal(3)).
+neg(terminal(4)).
+neg(terminal(5)).
+neg(terminal(9)).
+pos(terminal(1)).
+pos(terminal(10)).
+pos(terminal(13)).
+pos(terminal(6)).
+pos(terminal(7)).
+pos(terminal(8)).

@@ -1,0 +1,9 @@
+body_pred(index/1).
+body_pred(true_p/2).
+body_pred(true_q/2).
+body_pred(true_step/2).
+body_pred(input_a/2).
+body_pred(input_b/2).
+body_pred(input_c/2).
+body_pred(role/1).
+body_pred(successor/2).

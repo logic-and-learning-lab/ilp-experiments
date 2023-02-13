@@ -1,0 +1,9 @@
+body_pred(true_at/4).
+body_pred(input/2).
+body_pred(does/3).
+body_pred(role/1).
+body_pred(bounds/1).
+body_pred(controls/2).
+body_pred(distinct/2).
+body_pred(object/1).
+body_pred(succ/2).

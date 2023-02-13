@@ -1,0 +1,14 @@
+neg(goal(1,robot, 100)).
+neg(goal(2,robot, 100)).
+neg(goal(3,robot, 100)).
+neg(goal(4,robot, 100)).
+neg(goal(5,robot, 100)).
+neg(goal(6,robot, 100)).
+neg(goal(7,robot, 100)).
+pos(goal(1,robot, 0)).
+pos(goal(2,robot, 0)).
+pos(goal(3,robot, 0)).
+pos(goal(4,robot, 0)).
+pos(goal(5,robot, 0)).
+pos(goal(6,robot, 0)).
+pos(goal(7,robot, 0)).

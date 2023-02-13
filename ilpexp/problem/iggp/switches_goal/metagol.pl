@@ -1,0 +1,14 @@
+body_pred(true_at/4).
+body_pred(true_target/3).
+body_pred(true_open/3).
+body_pred(true_switch/4).
+body_pred(input/2).
+body_pred(role/1).
+body_pred(bounds/1).
+body_pred(controls/2).
+body_pred(dir/1).
+body_pred(door/1).
+body_pred(is_box/1).
+body_pred(object/1).
+body_pred(player_obj/1).
+body_pred(succ/2).

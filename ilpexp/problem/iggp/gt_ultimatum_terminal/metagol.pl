@@ -1,0 +1,10 @@
+body_pred(index/1).
+body_pred(true_whiteScore/2).
+body_pred(true_blackScore/2).
+body_pred(true_rounds/2).
+body_pred(true_control/2).
+body_pred(true_offered/3).
+body_pred(role/1).
+body_pred(maxRounds/1).
+body_pred(succ/2).
+body_pred(sum/3).

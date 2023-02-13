@@ -1,0 +1,17 @@
+body_pred(true_cellholds/5).
+body_pred(true_placecontrol/2).
+body_pred(true_rotatecontrol/2).
+body_pred(input/2).
+body_pred(input_place/4).
+body_pred(input_rotate/3).
+body_pred(role/1).
+body_pred(add/3).
+body_pred(cell/3).
+body_pred(direction/1).
+body_pred(globalindex/5).
+body_pred(horizontalflip/4).
+body_pred(verticalflip/4).
+body_pred(index/1).
+body_pred(quadrant/1).
+body_pred(rotation/5).
+body_pred(succ/2).

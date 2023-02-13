@@ -1,0 +1,12 @@
+body_pred(mark/1).
+body_pred(true_cell/3).
+body_pred(true_control/2).
+body_pred(true_step/2).
+body_pred(input/2).
+body_pred(input_move/3).
+body_pred(does/3).
+body_pred(does_move/4).
+body_pred(role/1).
+body_pred(adjacent/2).
+body_pred(node/1).
+body_pred(succ/2).

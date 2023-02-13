@@ -1,0 +1,2453 @@
+
+agent(robot).
+agent_robot(robot).
+digit(1).
+digit(2).
+digit(3).
+does_mark(1,robot, 3, 2, 3).
+does_mark(10,robot, 1, 1, 3).
+does_mark(100,robot, 3, 1, 1).
+does_mark(101,robot, 3, 2, 3).
+does_mark(102,robot, 1, 1, 3).
+does_mark(103,robot, 1, 3, 2).
+does_mark(104,robot, 1, 3, 3).
+does_mark(105,robot, 3, 3, 2).
+does_mark(106,robot, 3, 2, 2).
+does_mark(107,robot, 3, 2, 2).
+does_mark(108,robot, 3, 3, 2).
+does_mark(109,robot, 3, 3, 2).
+does_mark(11,robot, 2, 3, 3).
+does_mark(110,robot, 3, 3, 2).
+does_mark(111,robot, 3, 1, 3).
+does_mark(112,robot, 1, 1, 3).
+does_mark(113,robot, 1, 3, 2).
+does_mark(114,robot, 1, 3, 2).
+does_mark(115,robot, 2, 3, 1).
+does_mark(116,robot, 1, 3, 2).
+does_mark(117,robot, 1, 1, 3).
+does_mark(118,robot, 3, 2, 3).
+does_mark(119,robot, 3, 1, 1).
+does_mark(12,robot, 3, 2, 3).
+does_mark(120,robot, 2, 3, 1).
+does_mark(121,robot, 2, 3, 1).
+does_mark(122,robot, 2, 3, 1).
+does_mark(123,robot, 1, 3, 2).
+does_mark(124,robot, 3, 1, 3).
+does_mark(125,robot, 1, 3, 2).
+does_mark(127,robot, 3, 2, 2).
+does_mark(128,robot, 3, 3, 2).
+does_mark(129,robot, 3, 3, 1).
+does_mark(13,robot, 3, 1, 3).
+does_mark(130,robot, 3, 1, 1).
+does_mark(132,robot, 3, 3, 3).
+does_mark(133,robot, 2, 3, 1).
+does_mark(134,robot, 3, 1, 1).
+does_mark(135,robot, 1, 1, 3).
+does_mark(136,robot, 3, 1, 3).
+does_mark(137,robot, 1, 3, 3).
+does_mark(138,robot, 3, 2, 2).
+does_mark(139,robot, 3, 1, 1).
+does_mark(14,robot, 2, 2, 3).
+does_mark(140,robot, 1, 3, 3).
+does_mark(141,robot, 1, 1, 3).
+does_mark(142,robot, 2, 3, 3).
+does_mark(143,robot, 1, 1, 3).
+does_mark(144,robot, 3, 2, 2).
+does_mark(145,robot, 3, 2, 2).
+does_mark(146,robot, 2, 3, 3).
+does_mark(147,robot, 2, 3, 1).
+does_mark(148,robot, 3, 1, 1).
+does_mark(149,robot, 3, 1, 3).
+does_mark(15,robot, 2, 2, 3).
+does_mark(150,robot, 3, 3, 1).
+does_mark(151,robot, 1, 1, 3).
+does_mark(152,robot, 3, 2, 2).
+does_mark(153,robot, 2, 3, 1).
+does_mark(154,robot, 3, 2, 3).
+does_mark(155,robot, 3, 1, 3).
+does_mark(156,robot, 3, 1, 1).
+does_mark(157,robot, 3, 1, 3).
+does_mark(158,robot, 1, 1, 3).
+does_mark(159,robot, 3, 2, 3).
+does_mark(16,robot, 1, 3, 3).
+does_mark(160,robot, 1, 1, 3).
+does_mark(161,robot, 1, 1, 3).
+does_mark(162,robot, 3, 3, 2).
+does_mark(163,robot, 2, 3, 1).
+does_mark(164,robot, 2, 3, 1).
+does_mark(165,robot, 3, 1, 1).
+does_mark(166,robot, 2, 3, 1).
+does_mark(167,robot, 3, 3, 1).
+does_mark(168,robot, 3, 2, 2).
+does_mark(169,robot, 3, 1, 1).
+does_mark(17,robot, 3, 2, 3).
+does_mark(170,robot, 3, 3, 2).
+does_mark(171,robot, 3, 2, 2).
+does_mark(172,robot, 3, 3, 1).
+does_mark(173,robot, 2, 3, 3).
+does_mark(174,robot, 3, 2, 3).
+does_mark(175,robot, 3, 2, 2).
+does_mark(176,robot, 2, 2, 3).
+does_mark(177,robot, 3, 1, 1).
+does_mark(178,robot, 3, 2, 3).
+does_mark(179,robot, 3, 2, 3).
+does_mark(18,robot, 2, 2, 3).
+does_mark(180,robot, 2, 2, 3).
+does_mark(181,robot, 1, 1, 3).
+does_mark(182,robot, 3, 2, 3).
+does_mark(183,robot, 3, 2, 3).
+does_mark(184,robot, 1, 3, 3).
+does_mark(186,robot, 3, 1, 1).
+does_mark(187,robot, 3, 1, 1).
+does_mark(188,robot, 3, 1, 3).
+does_mark(189,robot, 1, 3, 3).
+does_mark(19,robot, 2, 3, 1).
+does_mark(190,robot, 2, 2, 3).
+does_mark(191,robot, 2, 3, 1).
+does_mark(192,robot, 1, 3, 2).
+does_mark(193,robot, 3, 3, 2).
+does_mark(194,robot, 3, 2, 3).
+does_mark(195,robot, 3, 1, 1).
+does_mark(196,robot, 2, 2, 3).
+does_mark(197,robot, 1, 1, 3).
+does_mark(198,robot, 1, 1, 3).
+does_mark(199,robot, 3, 3, 2).
+does_mark(2,robot, 2, 2, 3).
+does_mark(20,robot, 2, 3, 1).
+does_mark(200,robot, 3, 1, 1).
+does_mark(201,robot, 3, 2, 2).
+does_mark(202,robot, 3, 1, 1).
+does_mark(203,robot, 1, 3, 2).
+does_mark(204,robot, 2, 2, 3).
+does_mark(206,robot, 2, 3, 3).
+does_mark(207,robot, 2, 3, 3).
+does_mark(208,robot, 3, 2, 2).
+does_mark(209,robot, 3, 3, 1).
+does_mark(21,robot, 1, 3, 2).
+does_mark(210,robot, 2, 2, 3).
+does_mark(211,robot, 1, 3, 2).
+does_mark(212,robot, 3, 2, 2).
+does_mark(213,robot, 2, 3, 1).
+does_mark(214,robot, 1, 3, 3).
+does_mark(215,robot, 3, 1, 1).
+does_mark(216,robot, 3, 1, 1).
+does_mark(217,robot, 3, 3, 3).
+does_mark(218,robot, 2, 2, 3).
+does_mark(219,robot, 2, 3, 3).
+does_mark(22,robot, 3, 1, 3).
+does_mark(220,robot, 3, 1, 1).
+does_mark(221,robot, 1, 1, 3).
+does_mark(222,robot, 2, 2, 3).
+does_mark(223,robot, 1, 1, 3).
+does_mark(224,robot, 3, 2, 2).
+does_mark(225,robot, 1, 3, 2).
+does_mark(226,robot, 3, 3, 3).
+does_mark(227,robot, 1, 3, 2).
+does_mark(228,robot, 3, 3, 2).
+does_mark(229,robot, 3, 2, 3).
+does_mark(23,robot, 3, 1, 1).
+does_mark(230,robot, 3, 3, 2).
+does_mark(232,robot, 3, 2, 2).
+does_mark(233,robot, 2, 3, 3).
+does_mark(234,robot, 1, 1, 3).
+does_mark(235,robot, 1, 3, 2).
+does_mark(236,robot, 2, 3, 3).
+does_mark(237,robot, 2, 3, 1).
+does_mark(238,robot, 1, 3, 3).
+does_mark(239,robot, 1, 3, 2).
+does_mark(24,robot, 3, 1, 1).
+does_mark(240,robot, 2, 2, 3).
+does_mark(241,robot, 3, 3, 3).
+does_mark(25,robot, 1, 3, 2).
+does_mark(26,robot, 3, 3, 2).
+does_mark(27,robot, 2, 2, 3).
+does_mark(28,robot, 1, 3, 3).
+does_mark(29,robot, 1, 3, 2).
+does_mark(3,robot, 2, 3, 1).
+does_mark(30,robot, 3, 3, 1).
+does_mark(31,robot, 1, 3, 3).
+does_mark(32,robot, 1, 3, 2).
+does_mark(33,robot, 3, 2, 2).
+does_mark(34,robot, 2, 2, 3).
+does_mark(35,robot, 3, 3, 3).
+does_mark(36,robot, 1, 3, 3).
+does_mark(37,robot, 2, 3, 1).
+does_mark(38,robot, 1, 3, 3).
+does_mark(39,robot, 2, 3, 1).
+does_mark(4,robot, 3, 2, 2).
+does_mark(40,robot, 2, 3, 3).
+does_mark(41,robot, 1, 3, 2).
+does_mark(42,robot, 1, 3, 2).
+does_mark(43,robot, 1, 3, 3).
+does_mark(44,robot, 3, 3, 2).
+does_mark(45,robot, 2, 3, 1).
+does_mark(46,robot, 1, 3, 2).
+does_mark(47,robot, 3, 3, 3).
+does_mark(48,robot, 3, 3, 1).
+does_mark(49,robot, 1, 3, 2).
+does_mark(5,robot, 3, 2, 2).
+does_mark(50,robot, 2, 3, 1).
+does_mark(52,robot, 2, 2, 3).
+does_mark(53,robot, 3, 2, 2).
+does_mark(54,robot, 2, 3, 3).
+does_mark(55,robot, 1, 1, 3).
+does_mark(56,robot, 2, 3, 1).
+does_mark(57,robot, 2, 3, 3).
+does_mark(59,robot, 3, 2, 2).
+does_mark(6,robot, 3, 3, 3).
+does_mark(60,robot, 3, 2, 3).
+does_mark(61,robot, 3, 1, 1).
+does_mark(62,robot, 1, 1, 3).
+does_mark(63,robot, 3, 2, 2).
+does_mark(65,robot, 3, 1, 3).
+does_mark(66,robot, 3, 3, 1).
+does_mark(67,robot, 3, 2, 2).
+does_mark(68,robot, 1, 1, 3).
+does_mark(69,robot, 1, 3, 3).
+does_mark(7,robot, 2, 2, 3).
+does_mark(70,robot, 3, 2, 2).
+does_mark(71,robot, 3, 3, 2).
+does_mark(72,robot, 3, 3, 1).
+does_mark(73,robot, 3, 2, 2).
+does_mark(74,robot, 3, 1, 1).
+does_mark(75,robot, 2, 2, 3).
+does_mark(76,robot, 3, 1, 1).
+does_mark(78,robot, 1, 1, 3).
+does_mark(79,robot, 3, 1, 1).
+does_mark(80,robot, 3, 1, 1).
+does_mark(81,robot, 3, 3, 3).
+does_mark(82,robot, 2, 3, 1).
+does_mark(83,robot, 1, 1, 3).
+does_mark(84,robot, 3, 1, 1).
+does_mark(85,robot, 2, 2, 3).
+does_mark(86,robot, 2, 3, 1).
+does_mark(87,robot, 3, 2, 2).
+does_mark(88,robot, 3, 2, 2).
+does_mark(89,robot, 3, 3, 3).
+does_mark(9,robot, 2, 2, 3).
+does_mark(90,robot, 2, 3, 1).
+does_mark(91,robot, 2, 2, 3).
+does_mark(92,robot, 3, 2, 2).
+does_mark(93,robot, 3, 2, 2).
+does_mark(94,robot, 3, 1, 1).
+does_mark(95,robot, 1, 1, 3).
+does_mark(96,robot, 1, 1, 3).
+does_mark(97,robot, 3, 1, 3).
+does_mark(98,robot, 3, 1, 1).
+does_mark(99,robot, 2, 2, 3).
+filler(1).
+filler(2).
+filler(3).
+filler(b).
+index(1).
+index(2).
+index(3).
+input_mark(robot, 1, 1, 1).
+input_mark(robot, 1, 1, 2).
+input_mark(robot, 1, 1, 3).
+input_mark(robot, 1, 2, 1).
+input_mark(robot, 1, 2, 2).
+input_mark(robot, 1, 2, 3).
+input_mark(robot, 1, 3, 1).
+input_mark(robot, 1, 3, 2).
+input_mark(robot, 1, 3, 3).
+input_mark(robot, 2, 1, 1).
+input_mark(robot, 2, 1, 2).
+input_mark(robot, 2, 1, 3).
+input_mark(robot, 2, 2, 1).
+input_mark(robot, 2, 2, 2).
+input_mark(robot, 2, 2, 3).
+input_mark(robot, 2, 3, 1).
+input_mark(robot, 2, 3, 2).
+input_mark(robot, 2, 3, 3).
+input_mark(robot, 3, 1, 1).
+input_mark(robot, 3, 1, 2).
+input_mark(robot, 3, 1, 3).
+input_mark(robot, 3, 2, 1).
+input_mark(robot, 3, 2, 2).
+input_mark(robot, 3, 2, 3).
+input_mark(robot, 3, 3, 1).
+input_mark(robot, 3, 3, 2).
+input_mark(robot, 3, 3, 3).
+mark(b).
+mark_b(b).
+mypos(1).
+mypos(2).
+mypos(3).
+mypos_1(1).
+mypos_2(2).
+mypos_3(3).
+role(robot).
+score(0).
+score(100).
+score_0(0).
+score_100(100).
+true_cell(1,1, 1, b).
+true_cell(1,1, 2, 1).
+true_cell(1,1, 3, 3).
+true_cell(1,2, 1, 2).
+true_cell(1,2, 2, b).
+true_cell(1,2, 3, b).
+true_cell(1,3, 1, 1).
+true_cell(1,3, 2, b).
+true_cell(1,3, 3, 2).
+true_cell(10,1, 1, b).
+true_cell(10,1, 2, 1).
+true_cell(10,1, 3, b).
+true_cell(10,2, 1, 2).
+true_cell(10,2, 2, b).
+true_cell(10,2, 3, b).
+true_cell(10,3, 1, b).
+true_cell(10,3, 2, b).
+true_cell(10,3, 3, b).
+true_cell(100,1, 1, 3).
+true_cell(100,1, 2, 1).
+true_cell(100,1, 3, 2).
+true_cell(100,2, 1, 2).
+true_cell(100,2, 2, 3).
+true_cell(100,2, 3, b).
+true_cell(100,3, 1, b).
+true_cell(100,3, 2, 2).
+true_cell(100,3, 3, 3).
+true_cell(101,1, 1, b).
+true_cell(101,1, 2, 1).
+true_cell(101,1, 3, 2).
+true_cell(101,2, 1, 2).
+true_cell(101,2, 2, b).
+true_cell(101,2, 3, 3).
+true_cell(101,3, 1, 1).
+true_cell(101,3, 2, b).
+true_cell(101,3, 3, b).
+true_cell(102,1, 1, b).
+true_cell(102,1, 2, 1).
+true_cell(102,1, 3, b).
+true_cell(102,2, 1, 2).
+true_cell(102,2, 2, b).
+true_cell(102,2, 3, 1).
+true_cell(102,3, 1, b).
+true_cell(102,3, 2, b).
+true_cell(102,3, 3, 2).
+true_cell(103,1, 1, 3).
+true_cell(103,1, 2, 1).
+true_cell(103,1, 3, b).
+true_cell(103,2, 1, 2).
+true_cell(103,2, 2, b).
+true_cell(103,2, 3, 3).
+true_cell(103,3, 1, b).
+true_cell(103,3, 2, b).
+true_cell(103,3, 3, 1).
+true_cell(104,1, 1, b).
+true_cell(104,1, 2, 1).
+true_cell(104,1, 3, b).
+true_cell(104,2, 1, 2).
+true_cell(104,2, 2, b).
+true_cell(104,2, 3, b).
+true_cell(104,3, 1, 3).
+true_cell(104,3, 2, 2).
+true_cell(104,3, 3, b).
+true_cell(105,1, 1, b).
+true_cell(105,1, 2, 1).
+true_cell(105,1, 3, b).
+true_cell(105,2, 1, 2).
+true_cell(105,2, 2, 3).
+true_cell(105,2, 3, b).
+true_cell(105,3, 1, b).
+true_cell(105,3, 2, b).
+true_cell(105,3, 3, b).
+true_cell(106,1, 1, b).
+true_cell(106,1, 2, 1).
+true_cell(106,1, 3, b).
+true_cell(106,2, 1, 2).
+true_cell(106,2, 2, 3).
+true_cell(106,2, 3, b).
+true_cell(106,3, 1, 3).
+true_cell(106,3, 2, b).
+true_cell(106,3, 3, b).
+true_cell(107,1, 1, 3).
+true_cell(107,1, 2, 1).
+true_cell(107,1, 3, 2).
+true_cell(107,2, 1, 2).
+true_cell(107,2, 2, 3).
+true_cell(107,2, 3, b).
+true_cell(107,3, 1, b).
+true_cell(107,3, 2, b).
+true_cell(107,3, 3, 3).
+true_cell(108,1, 1, b).
+true_cell(108,1, 2, 1).
+true_cell(108,1, 3, b).
+true_cell(108,2, 1, 2).
+true_cell(108,2, 2, b).
+true_cell(108,2, 3, 1).
+true_cell(108,3, 1, 1).
+true_cell(108,3, 2, 3).
+true_cell(108,3, 3, b).
+true_cell(109,1, 1, 3).
+true_cell(109,1, 2, 1).
+true_cell(109,1, 3, b).
+true_cell(109,2, 1, 2).
+true_cell(109,2, 2, b).
+true_cell(109,2, 3, 1).
+true_cell(109,3, 1, b).
+true_cell(109,3, 2, b).
+true_cell(109,3, 3, b).
+true_cell(11,1, 1, 3).
+true_cell(11,1, 2, 1).
+true_cell(11,1, 3, 2).
+true_cell(11,2, 1, 2).
+true_cell(11,2, 2, b).
+true_cell(11,2, 3, b).
+true_cell(11,3, 1, b).
+true_cell(11,3, 2, b).
+true_cell(11,3, 3, 1).
+true_cell(110,1, 1, 3).
+true_cell(110,1, 2, 1).
+true_cell(110,1, 3, b).
+true_cell(110,2, 1, 2).
+true_cell(110,2, 2, b).
+true_cell(110,2, 3, b).
+true_cell(110,3, 1, b).
+true_cell(110,3, 2, b).
+true_cell(110,3, 3, b).
+true_cell(111,1, 1, b).
+true_cell(111,1, 2, 1).
+true_cell(111,1, 3, b).
+true_cell(111,2, 1, 2).
+true_cell(111,2, 2, b).
+true_cell(111,2, 3, 3).
+true_cell(111,3, 1, b).
+true_cell(111,3, 2, b).
+true_cell(111,3, 3, b).
+true_cell(112,1, 1, b).
+true_cell(112,1, 2, 1).
+true_cell(112,1, 3, 2).
+true_cell(112,2, 1, 2).
+true_cell(112,2, 2, b).
+true_cell(112,2, 3, 3).
+true_cell(112,3, 1, b).
+true_cell(112,3, 2, 3).
+true_cell(112,3, 3, b).
+true_cell(113,1, 1, b).
+true_cell(113,1, 2, 1).
+true_cell(113,1, 3, b).
+true_cell(113,2, 1, 2).
+true_cell(113,2, 2, b).
+true_cell(113,2, 3, 3).
+true_cell(113,3, 1, 3).
+true_cell(113,3, 2, b).
+true_cell(113,3, 3, b).
+true_cell(114,1, 1, b).
+true_cell(114,1, 2, 1).
+true_cell(114,1, 3, b).
+true_cell(114,2, 1, 2).
+true_cell(114,2, 2, 3).
+true_cell(114,2, 3, 1).
+true_cell(114,3, 1, 1).
+true_cell(114,3, 2, 2).
+true_cell(114,3, 3, 3).
+true_cell(115,1, 1, 3).
+true_cell(115,1, 2, 1).
+true_cell(115,1, 3, b).
+true_cell(115,2, 1, 2).
+true_cell(115,2, 2, b).
+true_cell(115,2, 3, b).
+true_cell(115,3, 1, b).
+true_cell(115,3, 2, 2).
+true_cell(115,3, 3, b).
+true_cell(116,1, 1, b).
+true_cell(116,1, 2, 1).
+true_cell(116,1, 3, b).
+true_cell(116,2, 1, 2).
+true_cell(116,2, 2, 3).
+true_cell(116,2, 3, 1).
+true_cell(116,3, 1, 3).
+true_cell(116,3, 2, 2).
+true_cell(116,3, 3, b).
+true_cell(117,1, 1, b).
+true_cell(117,1, 2, 1).
+true_cell(117,1, 3, 2).
+true_cell(117,2, 1, 2).
+true_cell(117,2, 2, 3).
+true_cell(117,2, 3, b).
+true_cell(117,3, 1, b).
+true_cell(117,3, 2, 2).
+true_cell(117,3, 3, 1).
+true_cell(118,1, 1, b).
+true_cell(118,1, 2, 1).
+true_cell(118,1, 3, b).
+true_cell(118,2, 1, 2).
+true_cell(118,2, 2, b).
+true_cell(118,2, 3, b).
+true_cell(118,3, 1, 1).
+true_cell(118,3, 2, b).
+true_cell(118,3, 3, 2).
+true_cell(119,1, 1, 3).
+true_cell(119,1, 2, 1).
+true_cell(119,1, 3, 2).
+true_cell(119,2, 1, 2).
+true_cell(119,2, 2, 3).
+true_cell(119,2, 3, 1).
+true_cell(119,3, 1, b).
+true_cell(119,3, 2, 2).
+true_cell(119,3, 3, 3).
+true_cell(12,1, 1, b).
+true_cell(12,1, 2, 1).
+true_cell(12,1, 3, b).
+true_cell(12,2, 1, 2).
+true_cell(12,2, 2, b).
+true_cell(12,2, 3, 1).
+true_cell(12,3, 1, b).
+true_cell(12,3, 2, b).
+true_cell(12,3, 3, 2).
+true_cell(120,1, 1, 3).
+true_cell(120,1, 2, 1).
+true_cell(120,1, 3, 2).
+true_cell(120,2, 1, 2).
+true_cell(120,2, 2, b).
+true_cell(120,2, 3, b).
+true_cell(120,3, 1, b).
+true_cell(120,3, 2, b).
+true_cell(120,3, 3, 3).
+true_cell(121,1, 1, b).
+true_cell(121,1, 2, 1).
+true_cell(121,1, 3, 2).
+true_cell(121,2, 1, 2).
+true_cell(121,2, 2, b).
+true_cell(121,2, 3, b).
+true_cell(121,3, 1, 1).
+true_cell(121,3, 2, 2).
+true_cell(121,3, 3, 3).
+true_cell(122,1, 1, b).
+true_cell(122,1, 2, 1).
+true_cell(122,1, 3, b).
+true_cell(122,2, 1, 2).
+true_cell(122,2, 2, b).
+true_cell(122,2, 3, b).
+true_cell(122,3, 1, b).
+true_cell(122,3, 2, b).
+true_cell(122,3, 3, 3).
+true_cell(123,1, 1, 3).
+true_cell(123,1, 2, 1).
+true_cell(123,1, 3, b).
+true_cell(123,2, 1, 2).
+true_cell(123,2, 2, 3).
+true_cell(123,2, 3, b).
+true_cell(123,3, 1, b).
+true_cell(123,3, 2, b).
+true_cell(123,3, 3, b).
+true_cell(124,1, 1, b).
+true_cell(124,1, 2, 1).
+true_cell(124,1, 3, 3).
+true_cell(124,2, 1, 2).
+true_cell(124,2, 2, b).
+true_cell(124,2, 3, b).
+true_cell(124,3, 1, b).
+true_cell(124,3, 2, b).
+true_cell(124,3, 3, 2).
+true_cell(125,1, 1, 3).
+true_cell(125,1, 2, 1).
+true_cell(125,1, 3, b).
+true_cell(125,2, 1, 2).
+true_cell(125,2, 2, 3).
+true_cell(125,2, 3, b).
+true_cell(125,3, 1, 1).
+true_cell(125,3, 2, 2).
+true_cell(125,3, 3, 3).
+true_cell(126,1, 1, 3).
+true_cell(126,1, 2, 1).
+true_cell(126,1, 3, 2).
+true_cell(126,2, 1, 2).
+true_cell(126,2, 2, b).
+true_cell(126,2, 3, 3).
+true_cell(126,3, 1, 1).
+true_cell(126,3, 2, 2).
+true_cell(126,3, 3, b).
+true_cell(127,1, 1, 3).
+true_cell(127,1, 2, 1).
+true_cell(127,1, 3, 2).
+true_cell(127,2, 1, 2).
+true_cell(127,2, 2, 3).
+true_cell(127,2, 3, b).
+true_cell(127,3, 1, 1).
+true_cell(127,3, 2, b).
+true_cell(127,3, 3, 3).
+true_cell(128,1, 1, b).
+true_cell(128,1, 2, 1).
+true_cell(128,1, 3, 3).
+true_cell(128,2, 1, 2).
+true_cell(128,2, 2, 3).
+true_cell(128,2, 3, b).
+true_cell(128,3, 1, b).
+true_cell(128,3, 2, b).
+true_cell(128,3, 3, b).
+true_cell(129,1, 1, b).
+true_cell(129,1, 2, 1).
+true_cell(129,1, 3, b).
+true_cell(129,2, 1, 2).
+true_cell(129,2, 2, b).
+true_cell(129,2, 3, b).
+true_cell(129,3, 1, b).
+true_cell(129,3, 2, b).
+true_cell(129,3, 3, b).
+true_cell(13,1, 1, b).
+true_cell(13,1, 2, 1).
+true_cell(13,1, 3, 3).
+true_cell(13,2, 1, 2).
+true_cell(13,2, 2, 3).
+true_cell(13,2, 3, b).
+true_cell(13,3, 1, b).
+true_cell(13,3, 2, 2).
+true_cell(13,3, 3, 1).
+true_cell(130,1, 1, b).
+true_cell(130,1, 2, 1).
+true_cell(130,1, 3, 3).
+true_cell(130,2, 1, 2).
+true_cell(130,2, 2, b).
+true_cell(130,2, 3, 1).
+true_cell(130,3, 1, b).
+true_cell(130,3, 2, 3).
+true_cell(130,3, 3, 2).
+true_cell(131,1, 1, 3).
+true_cell(131,1, 2, 1).
+true_cell(131,1, 3, b).
+true_cell(131,2, 1, 2).
+true_cell(131,2, 2, b).
+true_cell(131,2, 3, 3).
+true_cell(131,3, 1, 1).
+true_cell(131,3, 2, 3).
+true_cell(131,3, 3, 2).
+true_cell(132,1, 1, 3).
+true_cell(132,1, 2, 1).
+true_cell(132,1, 3, b).
+true_cell(132,2, 1, 2).
+true_cell(132,2, 2, b).
+true_cell(132,2, 3, b).
+true_cell(132,3, 1, 1).
+true_cell(132,3, 2, 2).
+true_cell(132,3, 3, b).
+true_cell(133,1, 1, b).
+true_cell(133,1, 2, 1).
+true_cell(133,1, 3, b).
+true_cell(133,2, 1, 2).
+true_cell(133,2, 2, 3).
+true_cell(133,2, 3, b).
+true_cell(133,3, 1, 1).
+true_cell(133,3, 2, b).
+true_cell(133,3, 3, 2).
+true_cell(134,1, 1, b).
+true_cell(134,1, 2, 1).
+true_cell(134,1, 3, b).
+true_cell(134,2, 1, 2).
+true_cell(134,2, 2, b).
+true_cell(134,2, 3, 3).
+true_cell(134,3, 1, b).
+true_cell(134,3, 2, 3).
+true_cell(134,3, 3, 2).
+true_cell(135,1, 1, b).
+true_cell(135,1, 2, 1).
+true_cell(135,1, 3, b).
+true_cell(135,2, 1, 2).
+true_cell(135,2, 2, 3).
+true_cell(135,2, 3, b).
+true_cell(135,3, 1, 1).
+true_cell(135,3, 2, b).
+true_cell(135,3, 3, 2).
+true_cell(136,1, 1, b).
+true_cell(136,1, 2, 1).
+true_cell(136,1, 3, 2).
+true_cell(136,2, 1, 2).
+true_cell(136,2, 2, b).
+true_cell(136,2, 3, 3).
+true_cell(136,3, 1, b).
+true_cell(136,3, 2, b).
+true_cell(136,3, 3, 1).
+true_cell(137,1, 1, b).
+true_cell(137,1, 2, 1).
+true_cell(137,1, 3, b).
+true_cell(137,2, 1, 2).
+true_cell(137,2, 2, 3).
+true_cell(137,2, 3, b).
+true_cell(137,3, 1, b).
+true_cell(137,3, 2, b).
+true_cell(137,3, 3, 1).
+true_cell(138,1, 1, b).
+true_cell(138,1, 2, 1).
+true_cell(138,1, 3, b).
+true_cell(138,2, 1, 2).
+true_cell(138,2, 2, b).
+true_cell(138,2, 3, 3).
+true_cell(138,3, 1, b).
+true_cell(138,3, 2, b).
+true_cell(138,3, 3, b).
+true_cell(139,1, 1, b).
+true_cell(139,1, 2, 1).
+true_cell(139,1, 3, b).
+true_cell(139,2, 1, 2).
+true_cell(139,2, 2, b).
+true_cell(139,2, 3, 1).
+true_cell(139,3, 1, b).
+true_cell(139,3, 2, 3).
+true_cell(139,3, 3, b).
+true_cell(14,1, 1, b).
+true_cell(14,1, 2, 1).
+true_cell(14,1, 3, 3).
+true_cell(14,2, 1, 2).
+true_cell(14,2, 2, b).
+true_cell(14,2, 3, b).
+true_cell(14,3, 1, 3).
+true_cell(14,3, 2, b).
+true_cell(14,3, 3, 2).
+true_cell(140,1, 1, b).
+true_cell(140,1, 2, 1).
+true_cell(140,1, 3, b).
+true_cell(140,2, 1, 2).
+true_cell(140,2, 2, 3).
+true_cell(140,2, 3, b).
+true_cell(140,3, 1, b).
+true_cell(140,3, 2, b).
+true_cell(140,3, 3, b).
+true_cell(141,1, 1, b).
+true_cell(141,1, 2, 1).
+true_cell(141,1, 3, b).
+true_cell(141,2, 1, 2).
+true_cell(141,2, 2, b).
+true_cell(141,2, 3, 1).
+true_cell(141,3, 1, 1).
+true_cell(141,3, 2, 3).
+true_cell(141,3, 3, 2).
+true_cell(142,1, 1, b).
+true_cell(142,1, 2, 1).
+true_cell(142,1, 3, 2).
+true_cell(142,2, 1, 2).
+true_cell(142,2, 2, b).
+true_cell(142,2, 3, b).
+true_cell(142,3, 1, b).
+true_cell(142,3, 2, 3).
+true_cell(142,3, 3, b).
+true_cell(143,1, 1, b).
+true_cell(143,1, 2, 1).
+true_cell(143,1, 3, 2).
+true_cell(143,2, 1, 2).
+true_cell(143,2, 2, 3).
+true_cell(143,2, 3, 1).
+true_cell(143,3, 1, 1).
+true_cell(143,3, 2, 2).
+true_cell(143,3, 3, 3).
+true_cell(144,1, 1, b).
+true_cell(144,1, 2, 1).
+true_cell(144,1, 3, 2).
+true_cell(144,2, 1, 2).
+true_cell(144,2, 2, 3).
+true_cell(144,2, 3, 1).
+true_cell(144,3, 1, 1).
+true_cell(144,3, 2, b).
+true_cell(144,3, 3, 3).
+true_cell(145,1, 1, b).
+true_cell(145,1, 2, 1).
+true_cell(145,1, 3, 3).
+true_cell(145,2, 1, 2).
+true_cell(145,2, 2, 3).
+true_cell(145,2, 3, b).
+true_cell(145,3, 1, 3).
+true_cell(145,3, 2, b).
+true_cell(145,3, 3, 1).
+true_cell(146,1, 1, b).
+true_cell(146,1, 2, 1).
+true_cell(146,1, 3, b).
+true_cell(146,2, 1, 2).
+true_cell(146,2, 2, b).
+true_cell(146,2, 3, b).
+true_cell(146,3, 1, b).
+true_cell(146,3, 2, b).
+true_cell(146,3, 3, b).
+true_cell(147,1, 1, b).
+true_cell(147,1, 2, 1).
+true_cell(147,1, 3, 3).
+true_cell(147,2, 1, 2).
+true_cell(147,2, 2, 3).
+true_cell(147,2, 3, b).
+true_cell(147,3, 1, 3).
+true_cell(147,3, 2, b).
+true_cell(147,3, 3, b).
+true_cell(148,1, 1, b).
+true_cell(148,1, 2, 1).
+true_cell(148,1, 3, b).
+true_cell(148,2, 1, 2).
+true_cell(148,2, 2, b).
+true_cell(148,2, 3, b).
+true_cell(148,3, 1, b).
+true_cell(148,3, 2, b).
+true_cell(148,3, 3, 3).
+true_cell(149,1, 1, b).
+true_cell(149,1, 2, 1).
+true_cell(149,1, 3, 2).
+true_cell(149,2, 1, 2).
+true_cell(149,2, 2, b).
+true_cell(149,2, 3, b).
+true_cell(149,3, 1, b).
+true_cell(149,3, 2, b).
+true_cell(149,3, 3, b).
+true_cell(15,1, 1, b).
+true_cell(15,1, 2, 1).
+true_cell(15,1, 3, b).
+true_cell(15,2, 1, 2).
+true_cell(15,2, 2, b).
+true_cell(15,2, 3, 1).
+true_cell(15,3, 1, 1).
+true_cell(15,3, 2, 2).
+true_cell(15,3, 3, 3).
+true_cell(150,1, 1, b).
+true_cell(150,1, 2, 1).
+true_cell(150,1, 3, b).
+true_cell(150,2, 1, 2).
+true_cell(150,2, 2, b).
+true_cell(150,2, 3, b).
+true_cell(150,3, 1, 3).
+true_cell(150,3, 2, 2).
+true_cell(150,3, 3, b).
+true_cell(151,1, 1, b).
+true_cell(151,1, 2, 1).
+true_cell(151,1, 3, 2).
+true_cell(151,2, 1, 2).
+true_cell(151,2, 2, 3).
+true_cell(151,2, 3, 1).
+true_cell(151,3, 1, b).
+true_cell(151,3, 2, b).
+true_cell(151,3, 3, 3).
+true_cell(152,1, 1, b).
+true_cell(152,1, 2, 1).
+true_cell(152,1, 3, 3).
+true_cell(152,2, 1, 2).
+true_cell(152,2, 2, b).
+true_cell(152,2, 3, 1).
+true_cell(152,3, 1, 3).
+true_cell(152,3, 2, b).
+true_cell(152,3, 3, b).
+true_cell(153,1, 1, b).
+true_cell(153,1, 2, 1).
+true_cell(153,1, 3, b).
+true_cell(153,2, 1, 2).
+true_cell(153,2, 2, b).
+true_cell(153,2, 3, b).
+true_cell(153,3, 1, b).
+true_cell(153,3, 2, b).
+true_cell(153,3, 3, b).
+true_cell(154,1, 1, b).
+true_cell(154,1, 2, 1).
+true_cell(154,1, 3, b).
+true_cell(154,2, 1, 2).
+true_cell(154,2, 2, b).
+true_cell(154,2, 3, b).
+true_cell(154,3, 1, 1).
+true_cell(154,3, 2, b).
+true_cell(154,3, 3, b).
+true_cell(155,1, 1, b).
+true_cell(155,1, 2, 1).
+true_cell(155,1, 3, b).
+true_cell(155,2, 1, 2).
+true_cell(155,2, 2, b).
+true_cell(155,2, 3, b).
+true_cell(155,3, 1, b).
+true_cell(155,3, 2, b).
+true_cell(155,3, 3, b).
+true_cell(156,1, 1, b).
+true_cell(156,1, 2, 1).
+true_cell(156,1, 3, 2).
+true_cell(156,2, 1, 2).
+true_cell(156,2, 2, b).
+true_cell(156,2, 3, b).
+true_cell(156,3, 1, b).
+true_cell(156,3, 2, b).
+true_cell(156,3, 3, b).
+true_cell(157,1, 1, b).
+true_cell(157,1, 2, 1).
+true_cell(157,1, 3, b).
+true_cell(157,2, 1, 2).
+true_cell(157,2, 2, b).
+true_cell(157,2, 3, b).
+true_cell(157,3, 1, b).
+true_cell(157,3, 2, b).
+true_cell(157,3, 3, 2).
+true_cell(158,1, 1, b).
+true_cell(158,1, 2, 1).
+true_cell(158,1, 3, 2).
+true_cell(158,2, 1, 2).
+true_cell(158,2, 2, b).
+true_cell(158,2, 3, b).
+true_cell(158,3, 1, b).
+true_cell(158,3, 2, 3).
+true_cell(158,3, 3, 1).
+true_cell(159,1, 1, 3).
+true_cell(159,1, 2, 1).
+true_cell(159,1, 3, b).
+true_cell(159,2, 1, 2).
+true_cell(159,2, 2, b).
+true_cell(159,2, 3, 1).
+true_cell(159,3, 1, b).
+true_cell(159,3, 2, b).
+true_cell(159,3, 3, 2).
+true_cell(16,1, 1, b).
+true_cell(16,1, 2, 1).
+true_cell(16,1, 3, b).
+true_cell(16,2, 1, 2).
+true_cell(16,2, 2, b).
+true_cell(16,2, 3, b).
+true_cell(16,3, 1, 1).
+true_cell(16,3, 2, 2).
+true_cell(16,3, 3, b).
+true_cell(160,1, 1, b).
+true_cell(160,1, 2, 1).
+true_cell(160,1, 3, b).
+true_cell(160,2, 1, 2).
+true_cell(160,2, 2, b).
+true_cell(160,2, 3, 1).
+true_cell(160,3, 1, b).
+true_cell(160,3, 2, b).
+true_cell(160,3, 3, b).
+true_cell(161,1, 1, b).
+true_cell(161,1, 2, 1).
+true_cell(161,1, 3, b).
+true_cell(161,2, 1, 2).
+true_cell(161,2, 2, b).
+true_cell(161,2, 3, b).
+true_cell(161,3, 1, 1).
+true_cell(161,3, 2, 2).
+true_cell(161,3, 3, b).
+true_cell(162,1, 1, b).
+true_cell(162,1, 2, 1).
+true_cell(162,1, 3, b).
+true_cell(162,2, 1, 2).
+true_cell(162,2, 2, b).
+true_cell(162,2, 3, b).
+true_cell(162,3, 1, b).
+true_cell(162,3, 2, 3).
+true_cell(162,3, 3, b).
+true_cell(163,1, 1, b).
+true_cell(163,1, 2, 1).
+true_cell(163,1, 3, b).
+true_cell(163,2, 1, 2).
+true_cell(163,2, 2, b).
+true_cell(163,2, 3, b).
+true_cell(163,3, 1, b).
+true_cell(163,3, 2, 3).
+true_cell(163,3, 3, 2).
+true_cell(164,1, 1, b).
+true_cell(164,1, 2, 1).
+true_cell(164,1, 3, b).
+true_cell(164,2, 1, 2).
+true_cell(164,2, 2, b).
+true_cell(164,2, 3, b).
+true_cell(164,3, 1, 1).
+true_cell(164,3, 2, 3).
+true_cell(164,3, 3, b).
+true_cell(165,1, 1, 3).
+true_cell(165,1, 2, 1).
+true_cell(165,1, 3, b).
+true_cell(165,2, 1, 2).
+true_cell(165,2, 2, 3).
+true_cell(165,2, 3, b).
+true_cell(165,3, 1, b).
+true_cell(165,3, 2, b).
+true_cell(165,3, 3, 3).
+true_cell(166,1, 1, b).
+true_cell(166,1, 2, 1).
+true_cell(166,1, 3, b).
+true_cell(166,2, 1, 2).
+true_cell(166,2, 2, 3).
+true_cell(166,2, 3, b).
+true_cell(166,3, 1, 1).
+true_cell(166,3, 2, b).
+true_cell(166,3, 3, 3).
+true_cell(167,1, 1, b).
+true_cell(167,1, 2, 1).
+true_cell(167,1, 3, 2).
+true_cell(167,2, 1, 2).
+true_cell(167,2, 2, b).
+true_cell(167,2, 3, 3).
+true_cell(167,3, 1, 3).
+true_cell(167,3, 2, b).
+true_cell(167,3, 3, b).
+true_cell(168,1, 1, b).
+true_cell(168,1, 2, 1).
+true_cell(168,1, 3, b).
+true_cell(168,2, 1, 2).
+true_cell(168,2, 2, b).
+true_cell(168,2, 3, 1).
+true_cell(168,3, 1, b).
+true_cell(168,3, 2, b).
+true_cell(168,3, 3, 3).
+true_cell(169,1, 1, 3).
+true_cell(169,1, 2, 1).
+true_cell(169,1, 3, b).
+true_cell(169,2, 1, 2).
+true_cell(169,2, 2, b).
+true_cell(169,2, 3, 1).
+true_cell(169,3, 1, b).
+true_cell(169,3, 2, 3).
+true_cell(169,3, 3, 2).
+true_cell(17,1, 1, b).
+true_cell(17,1, 2, 1).
+true_cell(17,1, 3, 3).
+true_cell(17,2, 1, 2).
+true_cell(17,2, 2, b).
+true_cell(17,2, 3, b).
+true_cell(17,3, 1, b).
+true_cell(17,3, 2, b).
+true_cell(17,3, 3, 1).
+true_cell(170,1, 1, b).
+true_cell(170,1, 2, 1).
+true_cell(170,1, 3, b).
+true_cell(170,2, 1, 2).
+true_cell(170,2, 2, b).
+true_cell(170,2, 3, b).
+true_cell(170,3, 1, 1).
+true_cell(170,3, 2, b).
+true_cell(170,3, 3, b).
+true_cell(171,1, 1, b).
+true_cell(171,1, 2, 1).
+true_cell(171,1, 3, 2).
+true_cell(171,2, 1, 2).
+true_cell(171,2, 2, 3).
+true_cell(171,2, 3, 1).
+true_cell(171,3, 1, b).
+true_cell(171,3, 2, b).
+true_cell(171,3, 3, 3).
+true_cell(172,1, 1, b).
+true_cell(172,1, 2, 1).
+true_cell(172,1, 3, 2).
+true_cell(172,2, 1, 2).
+true_cell(172,2, 2, b).
+true_cell(172,2, 3, b).
+true_cell(172,3, 1, b).
+true_cell(172,3, 2, 2).
+true_cell(172,3, 3, b).
+true_cell(173,1, 1, 3).
+true_cell(173,1, 2, 1).
+true_cell(173,1, 3, 2).
+true_cell(173,2, 1, 2).
+true_cell(173,2, 2, b).
+true_cell(173,2, 3, b).
+true_cell(173,3, 1, b).
+true_cell(173,3, 2, 3).
+true_cell(173,3, 3, b).
+true_cell(174,1, 1, b).
+true_cell(174,1, 2, 1).
+true_cell(174,1, 3, 2).
+true_cell(174,2, 1, 2).
+true_cell(174,2, 2, b).
+true_cell(174,2, 3, b).
+true_cell(174,3, 1, 1).
+true_cell(174,3, 2, b).
+true_cell(174,3, 3, b).
+true_cell(175,1, 1, b).
+true_cell(175,1, 2, 1).
+true_cell(175,1, 3, b).
+true_cell(175,2, 1, 2).
+true_cell(175,2, 2, b).
+true_cell(175,2, 3, 1).
+true_cell(175,3, 1, b).
+true_cell(175,3, 2, b).
+true_cell(175,3, 3, b).
+true_cell(176,1, 1, b).
+true_cell(176,1, 2, 1).
+true_cell(176,1, 3, b).
+true_cell(176,2, 1, 2).
+true_cell(176,2, 2, b).
+true_cell(176,2, 3, b).
+true_cell(176,3, 1, 1).
+true_cell(176,3, 2, b).
+true_cell(176,3, 3, 2).
+true_cell(177,1, 1, b).
+true_cell(177,1, 2, 1).
+true_cell(177,1, 3, b).
+true_cell(177,2, 1, 2).
+true_cell(177,2, 2, b).
+true_cell(177,2, 3, 1).
+true_cell(177,3, 1, b).
+true_cell(177,3, 2, 2).
+true_cell(177,3, 3, 3).
+true_cell(178,1, 1, 3).
+true_cell(178,1, 2, 1).
+true_cell(178,1, 3, 2).
+true_cell(178,2, 1, 2).
+true_cell(178,2, 2, b).
+true_cell(178,2, 3, 3).
+true_cell(178,3, 1, b).
+true_cell(178,3, 2, b).
+true_cell(178,3, 3, 1).
+true_cell(179,1, 1, 3).
+true_cell(179,1, 2, 1).
+true_cell(179,1, 3, b).
+true_cell(179,2, 1, 2).
+true_cell(179,2, 2, b).
+true_cell(179,2, 3, b).
+true_cell(179,3, 1, b).
+true_cell(179,3, 2, b).
+true_cell(179,3, 3, b).
+true_cell(18,1, 1, b).
+true_cell(18,1, 2, 1).
+true_cell(18,1, 3, 3).
+true_cell(18,2, 1, 2).
+true_cell(18,2, 2, b).
+true_cell(18,2, 3, b).
+true_cell(18,3, 1, 3).
+true_cell(18,3, 2, b).
+true_cell(18,3, 3, b).
+true_cell(180,1, 1, b).
+true_cell(180,1, 2, 1).
+true_cell(180,1, 3, b).
+true_cell(180,2, 1, 2).
+true_cell(180,2, 2, b).
+true_cell(180,2, 3, 1).
+true_cell(180,3, 1, 3).
+true_cell(180,3, 2, b).
+true_cell(180,3, 3, b).
+true_cell(181,1, 1, b).
+true_cell(181,1, 2, 1).
+true_cell(181,1, 3, b).
+true_cell(181,2, 1, 2).
+true_cell(181,2, 2, 3).
+true_cell(181,2, 3, 1).
+true_cell(181,3, 1, 1).
+true_cell(181,3, 2, b).
+true_cell(181,3, 3, 2).
+true_cell(182,1, 1, 3).
+true_cell(182,1, 2, 1).
+true_cell(182,1, 3, b).
+true_cell(182,2, 1, 2).
+true_cell(182,2, 2, b).
+true_cell(182,2, 3, 1).
+true_cell(182,3, 1, b).
+true_cell(182,3, 2, b).
+true_cell(182,3, 3, b).
+true_cell(183,1, 1, b).
+true_cell(183,1, 2, 1).
+true_cell(183,1, 3, b).
+true_cell(183,2, 1, 2).
+true_cell(183,2, 2, b).
+true_cell(183,2, 3, 3).
+true_cell(183,3, 1, 1).
+true_cell(183,3, 2, b).
+true_cell(183,3, 3, 2).
+true_cell(184,1, 1, b).
+true_cell(184,1, 2, 1).
+true_cell(184,1, 3, b).
+true_cell(184,2, 1, 2).
+true_cell(184,2, 2, b).
+true_cell(184,2, 3, b).
+true_cell(184,3, 1, b).
+true_cell(184,3, 2, b).
+true_cell(184,3, 3, 2).
+true_cell(185,1, 1, b).
+true_cell(185,1, 2, 1).
+true_cell(185,1, 3, 3).
+true_cell(185,2, 1, 2).
+true_cell(185,2, 2, 3).
+true_cell(185,2, 3, 1).
+true_cell(185,3, 1, 3).
+true_cell(185,3, 2, b).
+true_cell(185,3, 3, 2).
+true_cell(186,1, 1, 3).
+true_cell(186,1, 2, 1).
+true_cell(186,1, 3, b).
+true_cell(186,2, 1, 2).
+true_cell(186,2, 2, b).
+true_cell(186,2, 3, 1).
+true_cell(186,3, 1, b).
+true_cell(186,3, 2, 2).
+true_cell(186,3, 3, 3).
+true_cell(187,1, 1, 3).
+true_cell(187,1, 2, 1).
+true_cell(187,1, 3, 2).
+true_cell(187,2, 1, 2).
+true_cell(187,2, 2, 3).
+true_cell(187,2, 3, 1).
+true_cell(187,3, 1, b).
+true_cell(187,3, 2, b).
+true_cell(187,3, 3, 3).
+true_cell(188,1, 1, b).
+true_cell(188,1, 2, 1).
+true_cell(188,1, 3, 3).
+true_cell(188,2, 1, 2).
+true_cell(188,2, 2, b).
+true_cell(188,2, 3, 1).
+true_cell(188,3, 1, b).
+true_cell(188,3, 2, b).
+true_cell(188,3, 3, b).
+true_cell(189,1, 1, b).
+true_cell(189,1, 2, 1).
+true_cell(189,1, 3, b).
+true_cell(189,2, 1, 2).
+true_cell(189,2, 2, 3).
+true_cell(189,2, 3, b).
+true_cell(189,3, 1, 3).
+true_cell(189,3, 2, 2).
+true_cell(189,3, 3, 1).
+true_cell(19,1, 1, b).
+true_cell(19,1, 2, 1).
+true_cell(19,1, 3, 3).
+true_cell(19,2, 1, 2).
+true_cell(19,2, 2, b).
+true_cell(19,2, 3, b).
+true_cell(19,3, 1, b).
+true_cell(19,3, 2, 3).
+true_cell(19,3, 3, b).
+true_cell(190,1, 1, 3).
+true_cell(190,1, 2, 1).
+true_cell(190,1, 3, 2).
+true_cell(190,2, 1, 2).
+true_cell(190,2, 2, b).
+true_cell(190,2, 3, 1).
+true_cell(190,3, 1, b).
+true_cell(190,3, 2, b).
+true_cell(190,3, 3, 3).
+true_cell(191,1, 1, 3).
+true_cell(191,1, 2, 1).
+true_cell(191,1, 3, b).
+true_cell(191,2, 1, 2).
+true_cell(191,2, 2, 3).
+true_cell(191,2, 3, b).
+true_cell(191,3, 1, b).
+true_cell(191,3, 2, b).
+true_cell(191,3, 3, 2).
+true_cell(192,1, 1, 3).
+true_cell(192,1, 2, 1).
+true_cell(192,1, 3, b).
+true_cell(192,2, 1, 2).
+true_cell(192,2, 2, b).
+true_cell(192,2, 3, 1).
+true_cell(192,3, 1, 1).
+true_cell(192,3, 2, 2).
+true_cell(192,3, 3, 3).
+true_cell(193,1, 1, 3).
+true_cell(193,1, 2, 1).
+true_cell(193,1, 3, b).
+true_cell(193,2, 1, 2).
+true_cell(193,2, 2, b).
+true_cell(193,2, 3, 1).
+true_cell(193,3, 1, b).
+true_cell(193,3, 2, 3).
+true_cell(193,3, 3, b).
+true_cell(194,1, 1, b).
+true_cell(194,1, 2, 1).
+true_cell(194,1, 3, b).
+true_cell(194,2, 1, 2).
+true_cell(194,2, 2, b).
+true_cell(194,2, 3, 3).
+true_cell(194,3, 1, b).
+true_cell(194,3, 2, b).
+true_cell(194,3, 3, b).
+true_cell(195,1, 1, b).
+true_cell(195,1, 2, 1).
+true_cell(195,1, 3, 2).
+true_cell(195,2, 1, 2).
+true_cell(195,2, 2, 3).
+true_cell(195,2, 3, 1).
+true_cell(195,3, 1, b).
+true_cell(195,3, 2, b).
+true_cell(195,3, 3, 3).
+true_cell(196,1, 1, b).
+true_cell(196,1, 2, 1).
+true_cell(196,1, 3, b).
+true_cell(196,2, 1, 2).
+true_cell(196,2, 2, b).
+true_cell(196,2, 3, b).
+true_cell(196,3, 1, b).
+true_cell(196,3, 2, b).
+true_cell(196,3, 3, 2).
+true_cell(197,1, 1, b).
+true_cell(197,1, 2, 1).
+true_cell(197,1, 3, b).
+true_cell(197,2, 1, 2).
+true_cell(197,2, 2, 3).
+true_cell(197,2, 3, 1).
+true_cell(197,3, 1, 1).
+true_cell(197,3, 2, 2).
+true_cell(197,3, 3, 3).
+true_cell(198,1, 1, b).
+true_cell(198,1, 2, 1).
+true_cell(198,1, 3, b).
+true_cell(198,2, 1, 2).
+true_cell(198,2, 2, 3).
+true_cell(198,2, 3, b).
+true_cell(198,3, 1, b).
+true_cell(198,3, 2, b).
+true_cell(198,3, 3, 2).
+true_cell(199,1, 1, b).
+true_cell(199,1, 2, 1).
+true_cell(199,1, 3, 3).
+true_cell(199,2, 1, 2).
+true_cell(199,2, 2, b).
+true_cell(199,2, 3, b).
+true_cell(199,3, 1, 1).
+true_cell(199,3, 2, b).
+true_cell(199,3, 3, b).
+true_cell(2,1, 1, b).
+true_cell(2,1, 2, 1).
+true_cell(2,1, 3, b).
+true_cell(2,2, 1, 2).
+true_cell(2,2, 2, b).
+true_cell(2,2, 3, 1).
+true_cell(2,3, 1, b).
+true_cell(2,3, 2, b).
+true_cell(2,3, 3, b).
+true_cell(20,1, 1, b).
+true_cell(20,1, 2, 1).
+true_cell(20,1, 3, 3).
+true_cell(20,2, 1, 2).
+true_cell(20,2, 2, b).
+true_cell(20,2, 3, b).
+true_cell(20,3, 1, 1).
+true_cell(20,3, 2, b).
+true_cell(20,3, 3, 2).
+true_cell(200,1, 1, 3).
+true_cell(200,1, 2, 1).
+true_cell(200,1, 3, 2).
+true_cell(200,2, 1, 2).
+true_cell(200,2, 2, 3).
+true_cell(200,2, 3, 1).
+true_cell(200,3, 1, b).
+true_cell(200,3, 2, 2).
+true_cell(200,3, 3, b).
+true_cell(201,1, 1, b).
+true_cell(201,1, 2, 1).
+true_cell(201,1, 3, 3).
+true_cell(201,2, 1, 2).
+true_cell(201,2, 2, 3).
+true_cell(201,2, 3, b).
+true_cell(201,3, 1, b).
+true_cell(201,3, 2, b).
+true_cell(201,3, 3, 1).
+true_cell(202,1, 1, b).
+true_cell(202,1, 2, 1).
+true_cell(202,1, 3, b).
+true_cell(202,2, 1, 2).
+true_cell(202,2, 2, b).
+true_cell(202,2, 3, b).
+true_cell(202,3, 1, b).
+true_cell(202,3, 2, b).
+true_cell(202,3, 3, b).
+true_cell(203,1, 1, 3).
+true_cell(203,1, 2, 1).
+true_cell(203,1, 3, b).
+true_cell(203,2, 1, 2).
+true_cell(203,2, 2, 3).
+true_cell(203,2, 3, 1).
+true_cell(203,3, 1, 1).
+true_cell(203,3, 2, b).
+true_cell(203,3, 3, 3).
+true_cell(204,1, 1, b).
+true_cell(204,1, 2, 1).
+true_cell(204,1, 3, 3).
+true_cell(204,2, 1, 2).
+true_cell(204,2, 2, b).
+true_cell(204,2, 3, b).
+true_cell(204,3, 1, b).
+true_cell(204,3, 2, b).
+true_cell(204,3, 3, 1).
+true_cell(205,1, 1, 3).
+true_cell(205,1, 2, 1).
+true_cell(205,1, 3, b).
+true_cell(205,2, 1, 2).
+true_cell(205,2, 2, b).
+true_cell(205,2, 3, 1).
+true_cell(205,3, 1, 1).
+true_cell(205,3, 2, 3).
+true_cell(205,3, 3, 2).
+true_cell(206,1, 1, b).
+true_cell(206,1, 2, 1).
+true_cell(206,1, 3, b).
+true_cell(206,2, 1, 2).
+true_cell(206,2, 2, b).
+true_cell(206,2, 3, b).
+true_cell(206,3, 1, b).
+true_cell(206,3, 2, 3).
+true_cell(206,3, 3, 2).
+true_cell(207,1, 1, b).
+true_cell(207,1, 2, 1).
+true_cell(207,1, 3, b).
+true_cell(207,2, 1, 2).
+true_cell(207,2, 2, b).
+true_cell(207,2, 3, b).
+true_cell(207,3, 1, b).
+true_cell(207,3, 2, b).
+true_cell(207,3, 3, 1).
+true_cell(208,1, 1, b).
+true_cell(208,1, 2, 1).
+true_cell(208,1, 3, 2).
+true_cell(208,2, 1, 2).
+true_cell(208,2, 2, b).
+true_cell(208,2, 3, b).
+true_cell(208,3, 1, b).
+true_cell(208,3, 2, b).
+true_cell(208,3, 3, b).
+true_cell(209,1, 1, b).
+true_cell(209,1, 2, 1).
+true_cell(209,1, 3, 3).
+true_cell(209,2, 1, 2).
+true_cell(209,2, 2, 3).
+true_cell(209,2, 3, b).
+true_cell(209,3, 1, b).
+true_cell(209,3, 2, b).
+true_cell(209,3, 3, b).
+true_cell(21,1, 1, b).
+true_cell(21,1, 2, 1).
+true_cell(21,1, 3, b).
+true_cell(21,2, 1, 2).
+true_cell(21,2, 2, 3).
+true_cell(21,2, 3, 1).
+true_cell(21,3, 1, b).
+true_cell(21,3, 2, 2).
+true_cell(21,3, 3, 3).
+true_cell(210,1, 1, 3).
+true_cell(210,1, 2, 1).
+true_cell(210,1, 3, 2).
+true_cell(210,2, 1, 2).
+true_cell(210,2, 2, b).
+true_cell(210,2, 3, 1).
+true_cell(210,3, 1, b).
+true_cell(210,3, 2, 2).
+true_cell(210,3, 3, b).
+true_cell(211,1, 1, b).
+true_cell(211,1, 2, 1).
+true_cell(211,1, 3, b).
+true_cell(211,2, 1, 2).
+true_cell(211,2, 2, b).
+true_cell(211,2, 3, b).
+true_cell(211,3, 1, b).
+true_cell(211,3, 2, 3).
+true_cell(211,3, 3, b).
+true_cell(212,1, 1, b).
+true_cell(212,1, 2, 1).
+true_cell(212,1, 3, b).
+true_cell(212,2, 1, 2).
+true_cell(212,2, 2, b).
+true_cell(212,2, 3, b).
+true_cell(212,3, 1, b).
+true_cell(212,3, 2, b).
+true_cell(212,3, 3, b).
+true_cell(213,1, 1, 3).
+true_cell(213,1, 2, 1).
+true_cell(213,1, 3, b).
+true_cell(213,2, 1, 2).
+true_cell(213,2, 2, 3).
+true_cell(213,2, 3, b).
+true_cell(213,3, 1, 1).
+true_cell(213,3, 2, b).
+true_cell(213,3, 3, 2).
+true_cell(214,1, 1, b).
+true_cell(214,1, 2, 1).
+true_cell(214,1, 3, b).
+true_cell(214,2, 1, 2).
+true_cell(214,2, 2, b).
+true_cell(214,2, 3, b).
+true_cell(214,3, 1, 1).
+true_cell(214,3, 2, b).
+true_cell(214,3, 3, b).
+true_cell(215,1, 1, b).
+true_cell(215,1, 2, 1).
+true_cell(215,1, 3, 2).
+true_cell(215,2, 1, 2).
+true_cell(215,2, 2, b).
+true_cell(215,2, 3, 3).
+true_cell(215,3, 1, b).
+true_cell(215,3, 2, 3).
+true_cell(215,3, 3, b).
+true_cell(216,1, 1, b).
+true_cell(216,1, 2, 1).
+true_cell(216,1, 3, b).
+true_cell(216,2, 1, 2).
+true_cell(216,2, 2, b).
+true_cell(216,2, 3, 1).
+true_cell(216,3, 1, b).
+true_cell(216,3, 2, 3).
+true_cell(216,3, 3, 2).
+true_cell(217,1, 1, 3).
+true_cell(217,1, 2, 1).
+true_cell(217,1, 3, b).
+true_cell(217,2, 1, 2).
+true_cell(217,2, 2, b).
+true_cell(217,2, 3, 1).
+true_cell(217,3, 1, b).
+true_cell(217,3, 2, 2).
+true_cell(217,3, 3, b).
+true_cell(218,1, 1, b).
+true_cell(218,1, 2, 1).
+true_cell(218,1, 3, b).
+true_cell(218,2, 1, 2).
+true_cell(218,2, 2, b).
+true_cell(218,2, 3, 1).
+true_cell(218,3, 1, b).
+true_cell(218,3, 2, 2).
+true_cell(218,3, 3, b).
+true_cell(219,1, 1, b).
+true_cell(219,1, 2, 1).
+true_cell(219,1, 3, b).
+true_cell(219,2, 1, 2).
+true_cell(219,2, 2, b).
+true_cell(219,2, 3, b).
+true_cell(219,3, 1, 3).
+true_cell(219,3, 2, 2).
+true_cell(219,3, 3, 1).
+true_cell(22,1, 1, b).
+true_cell(22,1, 2, 1).
+true_cell(22,1, 3, 3).
+true_cell(22,2, 1, 2).
+true_cell(22,2, 2, 3).
+true_cell(22,2, 3, b).
+true_cell(22,3, 1, b).
+true_cell(22,3, 2, b).
+true_cell(22,3, 3, 1).
+true_cell(220,1, 1, b).
+true_cell(220,1, 2, 1).
+true_cell(220,1, 3, b).
+true_cell(220,2, 1, 2).
+true_cell(220,2, 2, b).
+true_cell(220,2, 3, b).
+true_cell(220,3, 1, b).
+true_cell(220,3, 2, b).
+true_cell(220,3, 3, 2).
+true_cell(221,1, 1, b).
+true_cell(221,1, 2, 1).
+true_cell(221,1, 3, 2).
+true_cell(221,2, 1, 2).
+true_cell(221,2, 2, b).
+true_cell(221,2, 3, 3).
+true_cell(221,3, 1, 1).
+true_cell(221,3, 2, 3).
+true_cell(221,3, 3, b).
+true_cell(222,1, 1, b).
+true_cell(222,1, 2, 1).
+true_cell(222,1, 3, 3).
+true_cell(222,2, 1, 2).
+true_cell(222,2, 2, b).
+true_cell(222,2, 3, 1).
+true_cell(222,3, 1, 3).
+true_cell(222,3, 2, 2).
+true_cell(222,3, 3, b).
+true_cell(223,1, 1, b).
+true_cell(223,1, 2, 1).
+true_cell(223,1, 3, b).
+true_cell(223,2, 1, 2).
+true_cell(223,2, 2, b).
+true_cell(223,2, 3, b).
+true_cell(223,3, 1, b).
+true_cell(223,3, 2, b).
+true_cell(223,3, 3, 3).
+true_cell(224,1, 1, b).
+true_cell(224,1, 2, 1).
+true_cell(224,1, 3, 2).
+true_cell(224,2, 1, 2).
+true_cell(224,2, 2, b).
+true_cell(224,2, 3, b).
+true_cell(224,3, 1, 1).
+true_cell(224,3, 2, b).
+true_cell(224,3, 3, 3).
+true_cell(225,1, 1, 3).
+true_cell(225,1, 2, 1).
+true_cell(225,1, 3, b).
+true_cell(225,2, 1, 2).
+true_cell(225,2, 2, b).
+true_cell(225,2, 3, b).
+true_cell(225,3, 1, b).
+true_cell(225,3, 2, 3).
+true_cell(225,3, 3, b).
+true_cell(226,1, 1, 3).
+true_cell(226,1, 2, 1).
+true_cell(226,1, 3, b).
+true_cell(226,2, 1, 2).
+true_cell(226,2, 2, 3).
+true_cell(226,2, 3, b).
+true_cell(226,3, 1, b).
+true_cell(226,3, 2, b).
+true_cell(226,3, 3, b).
+true_cell(227,1, 1, b).
+true_cell(227,1, 2, 1).
+true_cell(227,1, 3, b).
+true_cell(227,2, 1, 2).
+true_cell(227,2, 2, b).
+true_cell(227,2, 3, b).
+true_cell(227,3, 1, 3).
+true_cell(227,3, 2, b).
+true_cell(227,3, 3, b).
+true_cell(228,1, 1, b).
+true_cell(228,1, 2, 1).
+true_cell(228,1, 3, 3).
+true_cell(228,2, 1, 2).
+true_cell(228,2, 2, b).
+true_cell(228,2, 3, b).
+true_cell(228,3, 1, b).
+true_cell(228,3, 2, b).
+true_cell(228,3, 3, b).
+true_cell(229,1, 1, b).
+true_cell(229,1, 2, 1).
+true_cell(229,1, 3, 2).
+true_cell(229,2, 1, 2).
+true_cell(229,2, 2, b).
+true_cell(229,2, 3, 3).
+true_cell(229,3, 1, b).
+true_cell(229,3, 2, b).
+true_cell(229,3, 3, b).
+true_cell(23,1, 1, 3).
+true_cell(23,1, 2, 1).
+true_cell(23,1, 3, b).
+true_cell(23,2, 1, 2).
+true_cell(23,2, 2, 3).
+true_cell(23,2, 3, b).
+true_cell(23,3, 1, b).
+true_cell(23,3, 2, 2).
+true_cell(23,3, 3, 3).
+true_cell(230,1, 1, b).
+true_cell(230,1, 2, 1).
+true_cell(230,1, 3, b).
+true_cell(230,2, 1, 2).
+true_cell(230,2, 2, b).
+true_cell(230,2, 3, 3).
+true_cell(230,3, 1, b).
+true_cell(230,3, 2, 3).
+true_cell(230,3, 3, b).
+true_cell(231,1, 1, 3).
+true_cell(231,1, 2, 1).
+true_cell(231,1, 3, 2).
+true_cell(231,2, 1, 2).
+true_cell(231,2, 2, b).
+true_cell(231,2, 3, 3).
+true_cell(231,3, 1, b).
+true_cell(231,3, 2, 3).
+true_cell(231,3, 3, 1).
+true_cell(232,1, 1, b).
+true_cell(232,1, 2, 1).
+true_cell(232,1, 3, 2).
+true_cell(232,2, 1, 2).
+true_cell(232,2, 2, b).
+true_cell(232,2, 3, 3).
+true_cell(232,3, 1, b).
+true_cell(232,3, 2, b).
+true_cell(232,3, 3, b).
+true_cell(233,1, 1, b).
+true_cell(233,1, 2, 1).
+true_cell(233,1, 3, 2).
+true_cell(233,2, 1, 2).
+true_cell(233,2, 2, b).
+true_cell(233,2, 3, b).
+true_cell(233,3, 1, 3).
+true_cell(233,3, 2, b).
+true_cell(233,3, 3, b).
+true_cell(234,1, 1, b).
+true_cell(234,1, 2, 1).
+true_cell(234,1, 3, 2).
+true_cell(234,2, 1, 2).
+true_cell(234,2, 2, 3).
+true_cell(234,2, 3, b).
+true_cell(234,3, 1, 1).
+true_cell(234,3, 2, b).
+true_cell(234,3, 3, 3).
+true_cell(235,1, 1, b).
+true_cell(235,1, 2, 1).
+true_cell(235,1, 3, b).
+true_cell(235,2, 1, 2).
+true_cell(235,2, 2, b).
+true_cell(235,2, 3, b).
+true_cell(235,3, 1, b).
+true_cell(235,3, 2, b).
+true_cell(235,3, 3, 1).
+true_cell(236,1, 1, 3).
+true_cell(236,1, 2, 1).
+true_cell(236,1, 3, 2).
+true_cell(236,2, 1, 2).
+true_cell(236,2, 2, b).
+true_cell(236,2, 3, b).
+true_cell(236,3, 1, b).
+true_cell(236,3, 2, 3).
+true_cell(236,3, 3, 1).
+true_cell(237,1, 1, 3).
+true_cell(237,1, 2, 1).
+true_cell(237,1, 3, b).
+true_cell(237,2, 1, 2).
+true_cell(237,2, 2, b).
+true_cell(237,2, 3, b).
+true_cell(237,3, 1, b).
+true_cell(237,3, 2, 3).
+true_cell(237,3, 3, 2).
+true_cell(238,1, 1, b).
+true_cell(238,1, 2, 1).
+true_cell(238,1, 3, b).
+true_cell(238,2, 1, 2).
+true_cell(238,2, 2, 3).
+true_cell(238,2, 3, b).
+true_cell(238,3, 1, 3).
+true_cell(238,3, 2, b).
+true_cell(238,3, 3, 2).
+true_cell(239,1, 1, 3).
+true_cell(239,1, 2, 1).
+true_cell(239,1, 3, b).
+true_cell(239,2, 1, 2).
+true_cell(239,2, 2, 3).
+true_cell(239,2, 3, 1).
+true_cell(239,3, 1, 1).
+true_cell(239,3, 2, 2).
+true_cell(239,3, 3, 3).
+true_cell(24,1, 1, b).
+true_cell(24,1, 2, 1).
+true_cell(24,1, 3, b).
+true_cell(24,2, 1, 2).
+true_cell(24,2, 2, b).
+true_cell(24,2, 3, b).
+true_cell(24,3, 1, b).
+true_cell(24,3, 2, 2).
+true_cell(24,3, 3, b).
+true_cell(240,1, 1, b).
+true_cell(240,1, 2, 1).
+true_cell(240,1, 3, 2).
+true_cell(240,2, 1, 2).
+true_cell(240,2, 2, b).
+true_cell(240,2, 3, 1).
+true_cell(240,3, 1, 1).
+true_cell(240,3, 2, 2).
+true_cell(240,3, 3, 3).
+true_cell(241,1, 1, 3).
+true_cell(241,1, 2, 1).
+true_cell(241,1, 3, 2).
+true_cell(241,2, 1, 2).
+true_cell(241,2, 2, 3).
+true_cell(241,2, 3, 1).
+true_cell(241,3, 1, b).
+true_cell(241,3, 2, b).
+true_cell(241,3, 3, b).
+true_cell(25,1, 1, 3).
+true_cell(25,1, 2, 1).
+true_cell(25,1, 3, b).
+true_cell(25,2, 1, 2).
+true_cell(25,2, 2, b).
+true_cell(25,2, 3, b).
+true_cell(25,3, 1, b).
+true_cell(25,3, 2, 2).
+true_cell(25,3, 3, 1).
+true_cell(26,1, 1, b).
+true_cell(26,1, 2, 1).
+true_cell(26,1, 3, 3).
+true_cell(26,2, 1, 2).
+true_cell(26,2, 2, 3).
+true_cell(26,2, 3, 1).
+true_cell(26,3, 1, 3).
+true_cell(26,3, 2, b).
+true_cell(26,3, 3, b).
+true_cell(27,1, 1, 3).
+true_cell(27,1, 2, 1).
+true_cell(27,1, 3, 2).
+true_cell(27,2, 1, 2).
+true_cell(27,2, 2, b).
+true_cell(27,2, 3, b).
+true_cell(27,3, 1, b).
+true_cell(27,3, 2, b).
+true_cell(27,3, 3, 1).
+true_cell(28,1, 1, b).
+true_cell(28,1, 2, 1).
+true_cell(28,1, 3, b).
+true_cell(28,2, 1, 2).
+true_cell(28,2, 2, 3).
+true_cell(28,2, 3, 1).
+true_cell(28,3, 1, 3).
+true_cell(28,3, 2, b).
+true_cell(28,3, 3, 2).
+true_cell(29,1, 1, b).
+true_cell(29,1, 2, 1).
+true_cell(29,1, 3, b).
+true_cell(29,2, 1, 2).
+true_cell(29,2, 2, b).
+true_cell(29,2, 3, 3).
+true_cell(29,3, 1, 3).
+true_cell(29,3, 2, 2).
+true_cell(29,3, 3, 1).
+true_cell(3,1, 1, 3).
+true_cell(3,1, 2, 1).
+true_cell(3,1, 3, 2).
+true_cell(3,2, 1, 2).
+true_cell(3,2, 2, b).
+true_cell(3,2, 3, b).
+true_cell(3,3, 1, b).
+true_cell(3,3, 2, b).
+true_cell(3,3, 3, b).
+true_cell(30,1, 1, b).
+true_cell(30,1, 2, 1).
+true_cell(30,1, 3, b).
+true_cell(30,2, 1, 2).
+true_cell(30,2, 2, b).
+true_cell(30,2, 3, 3).
+true_cell(30,3, 1, b).
+true_cell(30,3, 2, b).
+true_cell(30,3, 3, b).
+true_cell(31,1, 1, b).
+true_cell(31,1, 2, 1).
+true_cell(31,1, 3, b).
+true_cell(31,2, 1, 2).
+true_cell(31,2, 2, b).
+true_cell(31,2, 3, 1).
+true_cell(31,3, 1, 1).
+true_cell(31,3, 2, 3).
+true_cell(31,3, 3, 2).
+true_cell(32,1, 1, b).
+true_cell(32,1, 2, 1).
+true_cell(32,1, 3, b).
+true_cell(32,2, 1, 2).
+true_cell(32,2, 2, b).
+true_cell(32,2, 3, b).
+true_cell(32,3, 1, b).
+true_cell(32,3, 2, b).
+true_cell(32,3, 3, b).
+true_cell(33,1, 1, 3).
+true_cell(33,1, 2, 1).
+true_cell(33,1, 3, 2).
+true_cell(33,2, 1, 2).
+true_cell(33,2, 2, 3).
+true_cell(33,2, 3, 1).
+true_cell(33,3, 1, b).
+true_cell(33,3, 2, b).
+true_cell(33,3, 3, 3).
+true_cell(34,1, 1, b).
+true_cell(34,1, 2, 1).
+true_cell(34,1, 3, b).
+true_cell(34,2, 1, 2).
+true_cell(34,2, 2, b).
+true_cell(34,2, 3, b).
+true_cell(34,3, 1, 3).
+true_cell(34,3, 2, 2).
+true_cell(34,3, 3, b).
+true_cell(35,1, 1, b).
+true_cell(35,1, 2, 1).
+true_cell(35,1, 3, b).
+true_cell(35,2, 1, 2).
+true_cell(35,2, 2, b).
+true_cell(35,2, 3, b).
+true_cell(35,3, 1, b).
+true_cell(35,3, 2, b).
+true_cell(35,3, 3, b).
+true_cell(36,1, 1, b).
+true_cell(36,1, 2, 1).
+true_cell(36,1, 3, b).
+true_cell(36,2, 1, 2).
+true_cell(36,2, 2, 3).
+true_cell(36,2, 3, b).
+true_cell(36,3, 1, 3).
+true_cell(36,3, 2, b).
+true_cell(36,3, 3, 1).
+true_cell(37,1, 1, b).
+true_cell(37,1, 2, 1).
+true_cell(37,1, 3, 3).
+true_cell(37,2, 1, 2).
+true_cell(37,2, 2, b).
+true_cell(37,2, 3, b).
+true_cell(37,3, 1, 1).
+true_cell(37,3, 2, 3).
+true_cell(37,3, 3, 2).
+true_cell(38,1, 1, b).
+true_cell(38,1, 2, 1).
+true_cell(38,1, 3, b).
+true_cell(38,2, 1, 2).
+true_cell(38,2, 2, b).
+true_cell(38,2, 3, 1).
+true_cell(38,3, 1, 3).
+true_cell(38,3, 2, 2).
+true_cell(38,3, 3, b).
+true_cell(39,1, 1, b).
+true_cell(39,1, 2, 1).
+true_cell(39,1, 3, 3).
+true_cell(39,2, 1, 2).
+true_cell(39,2, 2, 3).
+true_cell(39,2, 3, b).
+true_cell(39,3, 1, 3).
+true_cell(39,3, 2, 2).
+true_cell(39,3, 3, b).
+true_cell(4,1, 1, b).
+true_cell(4,1, 2, 1).
+true_cell(4,1, 3, b).
+true_cell(4,2, 1, 2).
+true_cell(4,2, 2, b).
+true_cell(4,2, 3, 3).
+true_cell(4,3, 1, 3).
+true_cell(4,3, 2, b).
+true_cell(4,3, 3, 1).
+true_cell(40,1, 1, b).
+true_cell(40,1, 2, 1).
+true_cell(40,1, 3, b).
+true_cell(40,2, 1, 2).
+true_cell(40,2, 2, b).
+true_cell(40,2, 3, b).
+true_cell(40,3, 1, b).
+true_cell(40,3, 2, 3).
+true_cell(40,3, 3, b).
+true_cell(41,1, 1, b).
+true_cell(41,1, 2, 1).
+true_cell(41,1, 3, b).
+true_cell(41,2, 1, 2).
+true_cell(41,2, 2, b).
+true_cell(41,2, 3, 3).
+true_cell(41,3, 1, b).
+true_cell(41,3, 2, b).
+true_cell(41,3, 3, 1).
+true_cell(42,1, 1, 3).
+true_cell(42,1, 2, 1).
+true_cell(42,1, 3, b).
+true_cell(42,2, 1, 2).
+true_cell(42,2, 2, 3).
+true_cell(42,2, 3, 1).
+true_cell(42,3, 1, b).
+true_cell(42,3, 2, 2).
+true_cell(42,3, 3, b).
+true_cell(43,1, 1, b).
+true_cell(43,1, 2, 1).
+true_cell(43,1, 3, b).
+true_cell(43,2, 1, 2).
+true_cell(43,2, 2, b).
+true_cell(43,2, 3, b).
+true_cell(43,3, 1, 3).
+true_cell(43,3, 2, b).
+true_cell(43,3, 3, b).
+true_cell(44,1, 1, b).
+true_cell(44,1, 2, 1).
+true_cell(44,1, 3, 3).
+true_cell(44,2, 1, 2).
+true_cell(44,2, 2, 3).
+true_cell(44,2, 3, b).
+true_cell(44,3, 1, 3).
+true_cell(44,3, 2, b).
+true_cell(44,3, 3, b).
+true_cell(45,1, 1, b).
+true_cell(45,1, 2, 1).
+true_cell(45,1, 3, b).
+true_cell(45,2, 1, 2).
+true_cell(45,2, 2, 3).
+true_cell(45,2, 3, b).
+true_cell(45,3, 1, 3).
+true_cell(45,3, 2, 2).
+true_cell(45,3, 3, b).
+true_cell(46,1, 1, b).
+true_cell(46,1, 2, 1).
+true_cell(46,1, 3, b).
+true_cell(46,2, 1, 2).
+true_cell(46,2, 2, 3).
+true_cell(46,2, 3, 1).
+true_cell(46,3, 1, b).
+true_cell(46,3, 2, b).
+true_cell(46,3, 3, 3).
+true_cell(47,1, 1, b).
+true_cell(47,1, 2, 1).
+true_cell(47,1, 3, 2).
+true_cell(47,2, 1, 2).
+true_cell(47,2, 2, b).
+true_cell(47,2, 3, b).
+true_cell(47,3, 1, b).
+true_cell(47,3, 2, b).
+true_cell(47,3, 3, b).
+true_cell(48,1, 1, b).
+true_cell(48,1, 2, 1).
+true_cell(48,1, 3, 3).
+true_cell(48,2, 1, 2).
+true_cell(48,2, 2, 3).
+true_cell(48,2, 3, b).
+true_cell(48,3, 1, 3).
+true_cell(48,3, 2, 2).
+true_cell(48,3, 3, b).
+true_cell(49,1, 1, b).
+true_cell(49,1, 2, 1).
+true_cell(49,1, 3, b).
+true_cell(49,2, 1, 2).
+true_cell(49,2, 2, 3).
+true_cell(49,2, 3, b).
+true_cell(49,3, 1, b).
+true_cell(49,3, 2, b).
+true_cell(49,3, 3, b).
+true_cell(5,1, 1, b).
+true_cell(5,1, 2, 1).
+true_cell(5,1, 3, 3).
+true_cell(5,2, 1, 2).
+true_cell(5,2, 2, b).
+true_cell(5,2, 3, b).
+true_cell(5,3, 1, b).
+true_cell(5,3, 2, b).
+true_cell(5,3, 3, b).
+true_cell(50,1, 1, b).
+true_cell(50,1, 2, 1).
+true_cell(50,1, 3, 3).
+true_cell(50,2, 1, 2).
+true_cell(50,2, 2, 3).
+true_cell(50,2, 3, b).
+true_cell(50,3, 1, b).
+true_cell(50,3, 2, b).
+true_cell(50,3, 3, 2).
+true_cell(51,1, 1, 3).
+true_cell(51,1, 2, 1).
+true_cell(51,1, 3, 2).
+true_cell(51,2, 1, 2).
+true_cell(51,2, 2, b).
+true_cell(51,2, 3, 1).
+true_cell(51,3, 1, 1).
+true_cell(51,3, 2, 3).
+true_cell(51,3, 3, b).
+true_cell(52,1, 1, b).
+true_cell(52,1, 2, 1).
+true_cell(52,1, 3, b).
+true_cell(52,2, 1, 2).
+true_cell(52,2, 2, b).
+true_cell(52,2, 3, b).
+true_cell(52,3, 1, 1).
+true_cell(52,3, 2, 2).
+true_cell(52,3, 3, b).
+true_cell(53,1, 1, b).
+true_cell(53,1, 2, 1).
+true_cell(53,1, 3, 2).
+true_cell(53,2, 1, 2).
+true_cell(53,2, 2, b).
+true_cell(53,2, 3, 3).
+true_cell(53,3, 1, 3).
+true_cell(53,3, 2, b).
+true_cell(53,3, 3, 1).
+true_cell(54,1, 1, b).
+true_cell(54,1, 2, 1).
+true_cell(54,1, 3, b).
+true_cell(54,2, 1, 2).
+true_cell(54,2, 2, b).
+true_cell(54,2, 3, b).
+true_cell(54,3, 1, 3).
+true_cell(54,3, 2, b).
+true_cell(54,3, 3, b).
+true_cell(55,1, 1, b).
+true_cell(55,1, 2, 1).
+true_cell(55,1, 3, b).
+true_cell(55,2, 1, 2).
+true_cell(55,2, 2, b).
+true_cell(55,2, 3, 3).
+true_cell(55,3, 1, 1).
+true_cell(55,3, 2, 2).
+true_cell(55,3, 3, b).
+true_cell(56,1, 1, b).
+true_cell(56,1, 2, 1).
+true_cell(56,1, 3, b).
+true_cell(56,2, 1, 2).
+true_cell(56,2, 2, 3).
+true_cell(56,2, 3, b).
+true_cell(56,3, 1, 1).
+true_cell(56,3, 2, 2).
+true_cell(56,3, 3, 3).
+true_cell(57,1, 1, 3).
+true_cell(57,1, 2, 1).
+true_cell(57,1, 3, b).
+true_cell(57,2, 1, 2).
+true_cell(57,2, 2, b).
+true_cell(57,2, 3, b).
+true_cell(57,3, 1, b).
+true_cell(57,3, 2, b).
+true_cell(57,3, 3, 1).
+true_cell(58,1, 1, 3).
+true_cell(58,1, 2, 1).
+true_cell(58,1, 3, 2).
+true_cell(58,2, 1, 2).
+true_cell(58,2, 2, 3).
+true_cell(58,2, 3, b).
+true_cell(58,3, 1, b).
+true_cell(58,3, 2, 2).
+true_cell(58,3, 3, 1).
+true_cell(59,1, 1, b).
+true_cell(59,1, 2, 1).
+true_cell(59,1, 3, b).
+true_cell(59,2, 1, 2).
+true_cell(59,2, 2, b).
+true_cell(59,2, 3, 3).
+true_cell(59,3, 1, b).
+true_cell(59,3, 2, b).
+true_cell(59,3, 3, 1).
+true_cell(6,1, 1, b).
+true_cell(6,1, 2, 1).
+true_cell(6,1, 3, 2).
+true_cell(6,2, 1, 2).
+true_cell(6,2, 2, 3).
+true_cell(6,2, 3, 1).
+true_cell(6,3, 1, 1).
+true_cell(6,3, 2, 2).
+true_cell(6,3, 3, b).
+true_cell(60,1, 1, 3).
+true_cell(60,1, 2, 1).
+true_cell(60,1, 3, b).
+true_cell(60,2, 1, 2).
+true_cell(60,2, 2, b).
+true_cell(60,2, 3, b).
+true_cell(60,3, 1, b).
+true_cell(60,3, 2, b).
+true_cell(60,3, 3, 1).
+true_cell(61,1, 1, 3).
+true_cell(61,1, 2, 1).
+true_cell(61,1, 3, b).
+true_cell(61,2, 1, 2).
+true_cell(61,2, 2, b).
+true_cell(61,2, 3, 3).
+true_cell(61,3, 1, b).
+true_cell(61,3, 2, 3).
+true_cell(61,3, 3, 2).
+true_cell(62,1, 1, b).
+true_cell(62,1, 2, 1).
+true_cell(62,1, 3, 2).
+true_cell(62,2, 1, 2).
+true_cell(62,2, 2, b).
+true_cell(62,2, 3, 3).
+true_cell(62,3, 1, 1).
+true_cell(62,3, 2, 2).
+true_cell(62,3, 3, b).
+true_cell(63,1, 1, b).
+true_cell(63,1, 2, 1).
+true_cell(63,1, 3, b).
+true_cell(63,2, 1, 2).
+true_cell(63,2, 2, b).
+true_cell(63,2, 3, b).
+true_cell(63,3, 1, 3).
+true_cell(63,3, 2, b).
+true_cell(63,3, 3, b).
+true_cell(64,1, 1, b).
+true_cell(64,1, 2, 1).
+true_cell(64,1, 3, 3).
+true_cell(64,2, 1, 2).
+true_cell(64,2, 2, 3).
+true_cell(64,2, 3, 1).
+true_cell(64,3, 1, 1).
+true_cell(64,3, 2, 2).
+true_cell(64,3, 3, b).
+true_cell(65,1, 1, b).
+true_cell(65,1, 2, 1).
+true_cell(65,1, 3, b).
+true_cell(65,2, 1, 2).
+true_cell(65,2, 2, b).
+true_cell(65,2, 3, b).
+true_cell(65,3, 1, b).
+true_cell(65,3, 2, b).
+true_cell(65,3, 3, 1).
+true_cell(66,1, 1, b).
+true_cell(66,1, 2, 1).
+true_cell(66,1, 3, b).
+true_cell(66,2, 1, 2).
+true_cell(66,2, 2, b).
+true_cell(66,2, 3, b).
+true_cell(66,3, 1, b).
+true_cell(66,3, 2, 3).
+true_cell(66,3, 3, b).
+true_cell(67,1, 1, 3).
+true_cell(67,1, 2, 1).
+true_cell(67,1, 3, b).
+true_cell(67,2, 1, 2).
+true_cell(67,2, 2, 3).
+true_cell(67,2, 3, b).
+true_cell(67,3, 1, 1).
+true_cell(67,3, 2, b).
+true_cell(67,3, 3, 3).
+true_cell(68,1, 1, b).
+true_cell(68,1, 2, 1).
+true_cell(68,1, 3, 2).
+true_cell(68,2, 1, 2).
+true_cell(68,2, 2, b).
+true_cell(68,2, 3, 1).
+true_cell(68,3, 1, 1).
+true_cell(68,3, 2, 3).
+true_cell(68,3, 3, b).
+true_cell(69,1, 1, b).
+true_cell(69,1, 2, 1).
+true_cell(69,1, 3, b).
+true_cell(69,2, 1, 2).
+true_cell(69,2, 2, b).
+true_cell(69,2, 3, 1).
+true_cell(69,3, 1, 1).
+true_cell(69,3, 2, 3).
+true_cell(69,3, 3, b).
+true_cell(7,1, 1, b).
+true_cell(7,1, 2, 1).
+true_cell(7,1, 3, 2).
+true_cell(7,2, 1, 2).
+true_cell(7,2, 2, b).
+true_cell(7,2, 3, 1).
+true_cell(7,3, 1, b).
+true_cell(7,3, 2, b).
+true_cell(7,3, 3, 3).
+true_cell(70,1, 1, b).
+true_cell(70,1, 2, 1).
+true_cell(70,1, 3, 2).
+true_cell(70,2, 1, 2).
+true_cell(70,2, 2, b).
+true_cell(70,2, 3, b).
+true_cell(70,3, 1, 3).
+true_cell(70,3, 2, b).
+true_cell(70,3, 3, 1).
+true_cell(71,1, 1, 3).
+true_cell(71,1, 2, 1).
+true_cell(71,1, 3, b).
+true_cell(71,2, 1, 2).
+true_cell(71,2, 2, 3).
+true_cell(71,2, 3, b).
+true_cell(71,3, 1, b).
+true_cell(71,3, 2, b).
+true_cell(71,3, 3, b).
+true_cell(72,1, 1, b).
+true_cell(72,1, 2, 1).
+true_cell(72,1, 3, 3).
+true_cell(72,2, 1, 2).
+true_cell(72,2, 2, b).
+true_cell(72,2, 3, b).
+true_cell(72,3, 1, b).
+true_cell(72,3, 2, b).
+true_cell(72,3, 3, b).
+true_cell(73,1, 1, 3).
+true_cell(73,1, 2, 1).
+true_cell(73,1, 3, 2).
+true_cell(73,2, 1, 2).
+true_cell(73,2, 2, 3).
+true_cell(73,2, 3, 1).
+true_cell(73,3, 1, 1).
+true_cell(73,3, 2, b).
+true_cell(73,3, 3, 3).
+true_cell(74,1, 1, b).
+true_cell(74,1, 2, 1).
+true_cell(74,1, 3, 3).
+true_cell(74,2, 1, 2).
+true_cell(74,2, 2, 3).
+true_cell(74,2, 3, 1).
+true_cell(74,3, 1, b).
+true_cell(74,3, 2, b).
+true_cell(74,3, 3, b).
+true_cell(75,1, 1, 3).
+true_cell(75,1, 2, 1).
+true_cell(75,1, 3, b).
+true_cell(75,2, 1, 2).
+true_cell(75,2, 2, b).
+true_cell(75,2, 3, 1).
+true_cell(75,3, 1, b).
+true_cell(75,3, 2, 2).
+true_cell(75,3, 3, b).
+true_cell(76,1, 1, b).
+true_cell(76,1, 2, 1).
+true_cell(76,1, 3, 2).
+true_cell(76,2, 1, 2).
+true_cell(76,2, 2, 3).
+true_cell(76,2, 3, 1).
+true_cell(76,3, 1, b).
+true_cell(76,3, 2, 2).
+true_cell(76,3, 3, 3).
+true_cell(77,1, 1, b).
+true_cell(77,1, 2, 1).
+true_cell(77,1, 3, 3).
+true_cell(77,2, 1, 2).
+true_cell(77,2, 2, b).
+true_cell(77,2, 3, b).
+true_cell(77,3, 1, b).
+true_cell(77,3, 2, 3).
+true_cell(77,3, 3, 1).
+true_cell(78,1, 1, b).
+true_cell(78,1, 2, 1).
+true_cell(78,1, 3, 2).
+true_cell(78,2, 1, 2).
+true_cell(78,2, 2, b).
+true_cell(78,2, 3, b).
+true_cell(78,3, 1, b).
+true_cell(78,3, 2, b).
+true_cell(78,3, 3, 1).
+true_cell(79,1, 1, b).
+true_cell(79,1, 2, 1).
+true_cell(79,1, 3, b).
+true_cell(79,2, 1, 2).
+true_cell(79,2, 2, b).
+true_cell(79,2, 3, 3).
+true_cell(79,3, 1, b).
+true_cell(79,3, 2, b).
+true_cell(79,3, 3, 2).
+true_cell(8,1, 1, b).
+true_cell(8,1, 2, 1).
+true_cell(8,1, 3, 2).
+true_cell(8,2, 1, 2).
+true_cell(8,2, 2, 3).
+true_cell(8,2, 3, b).
+true_cell(8,3, 1, 3).
+true_cell(8,3, 2, 2).
+true_cell(8,3, 3, 1).
+true_cell(80,1, 1, b).
+true_cell(80,1, 2, 1).
+true_cell(80,1, 3, 3).
+true_cell(80,2, 1, 2).
+true_cell(80,2, 2, b).
+true_cell(80,2, 3, b).
+true_cell(80,3, 1, b).
+true_cell(80,3, 2, b).
+true_cell(80,3, 3, b).
+true_cell(81,1, 1, 3).
+true_cell(81,1, 2, 1).
+true_cell(81,1, 3, 2).
+true_cell(81,2, 1, 2).
+true_cell(81,2, 2, 3).
+true_cell(81,2, 3, b).
+true_cell(81,3, 1, b).
+true_cell(81,3, 2, b).
+true_cell(81,3, 3, b).
+true_cell(82,1, 1, b).
+true_cell(82,1, 2, 1).
+true_cell(82,1, 3, b).
+true_cell(82,2, 1, 2).
+true_cell(82,2, 2, b).
+true_cell(82,2, 3, b).
+true_cell(82,3, 1, 3).
+true_cell(82,3, 2, 2).
+true_cell(82,3, 3, b).
+true_cell(83,1, 1, b).
+true_cell(83,1, 2, 1).
+true_cell(83,1, 3, b).
+true_cell(83,2, 1, 2).
+true_cell(83,2, 2, b).
+true_cell(83,2, 3, b).
+true_cell(83,3, 1, b).
+true_cell(83,3, 2, b).
+true_cell(83,3, 3, 1).
+true_cell(84,1, 1, b).
+true_cell(84,1, 2, 1).
+true_cell(84,1, 3, b).
+true_cell(84,2, 1, 2).
+true_cell(84,2, 2, b).
+true_cell(84,2, 3, 3).
+true_cell(84,3, 1, b).
+true_cell(84,3, 2, b).
+true_cell(84,3, 3, b).
+true_cell(85,1, 1, b).
+true_cell(85,1, 2, 1).
+true_cell(85,1, 3, b).
+true_cell(85,2, 1, 2).
+true_cell(85,2, 2, b).
+true_cell(85,2, 3, b).
+true_cell(85,3, 1, 3).
+true_cell(85,3, 2, b).
+true_cell(85,3, 3, b).
+true_cell(86,1, 1, 3).
+true_cell(86,1, 2, 1).
+true_cell(86,1, 3, 2).
+true_cell(86,2, 1, 2).
+true_cell(86,2, 2, 3).
+true_cell(86,2, 3, b).
+true_cell(86,3, 1, 1).
+true_cell(86,3, 2, 2).
+true_cell(86,3, 3, 3).
+true_cell(87,1, 1, b).
+true_cell(87,1, 2, 1).
+true_cell(87,1, 3, b).
+true_cell(87,2, 1, 2).
+true_cell(87,2, 2, b).
+true_cell(87,2, 3, b).
+true_cell(87,3, 1, b).
+true_cell(87,3, 2, b).
+true_cell(87,3, 3, 3).
+true_cell(88,1, 1, b).
+true_cell(88,1, 2, 1).
+true_cell(88,1, 3, 2).
+true_cell(88,2, 1, 2).
+true_cell(88,2, 2, b).
+true_cell(88,2, 3, 3).
+true_cell(88,3, 1, 1).
+true_cell(88,3, 2, b).
+true_cell(88,3, 3, b).
+true_cell(89,1, 1, b).
+true_cell(89,1, 2, 1).
+true_cell(89,1, 3, b).
+true_cell(89,2, 1, 2).
+true_cell(89,2, 2, b).
+true_cell(89,2, 3, 1).
+true_cell(89,3, 1, b).
+true_cell(89,3, 2, b).
+true_cell(89,3, 3, b).
+true_cell(9,1, 1, b).
+true_cell(9,1, 2, 1).
+true_cell(9,1, 3, b).
+true_cell(9,2, 1, 2).
+true_cell(9,2, 2, b).
+true_cell(9,2, 3, b).
+true_cell(9,3, 1, 1).
+true_cell(9,3, 2, b).
+true_cell(9,3, 3, 3).
+true_cell(90,1, 1, b).
+true_cell(90,1, 2, 1).
+true_cell(90,1, 3, 3).
+true_cell(90,2, 1, 2).
+true_cell(90,2, 2, b).
+true_cell(90,2, 3, b).
+true_cell(90,3, 1, 1).
+true_cell(90,3, 2, 2).
+true_cell(90,3, 3, b).
+true_cell(91,1, 1, b).
+true_cell(91,1, 2, 1).
+true_cell(91,1, 3, 2).
+true_cell(91,2, 1, 2).
+true_cell(91,2, 2, b).
+true_cell(91,2, 3, b).
+true_cell(91,3, 1, 3).
+true_cell(91,3, 2, 2).
+true_cell(91,3, 3, 1).
+true_cell(92,1, 1, b).
+true_cell(92,1, 2, 1).
+true_cell(92,1, 3, 3).
+true_cell(92,2, 1, 2).
+true_cell(92,2, 2, 3).
+true_cell(92,2, 3, b).
+true_cell(92,3, 1, b).
+true_cell(92,3, 2, b).
+true_cell(92,3, 3, b).
+true_cell(93,1, 1, b).
+true_cell(93,1, 2, 1).
+true_cell(93,1, 3, 2).
+true_cell(93,2, 1, 2).
+true_cell(93,2, 2, b).
+true_cell(93,2, 3, 3).
+true_cell(93,3, 1, 3).
+true_cell(93,3, 2, b).
+true_cell(93,3, 3, b).
+true_cell(94,1, 1, b).
+true_cell(94,1, 2, 1).
+true_cell(94,1, 3, b).
+true_cell(94,2, 1, 2).
+true_cell(94,2, 2, b).
+true_cell(94,2, 3, 3).
+true_cell(94,3, 1, b).
+true_cell(94,3, 2, 2).
+true_cell(94,3, 3, b).
+true_cell(95,1, 1, b).
+true_cell(95,1, 2, 1).
+true_cell(95,1, 3, b).
+true_cell(95,2, 1, 2).
+true_cell(95,2, 2, b).
+true_cell(95,2, 3, b).
+true_cell(95,3, 1, b).
+true_cell(95,3, 2, 2).
+true_cell(95,3, 3, b).
+true_cell(96,1, 1, b).
+true_cell(96,1, 2, 1).
+true_cell(96,1, 3, 2).
+true_cell(96,2, 1, 2).
+true_cell(96,2, 2, b).
+true_cell(96,2, 3, b).
+true_cell(96,3, 1, b).
+true_cell(96,3, 2, b).
+true_cell(96,3, 3, b).
+true_cell(97,1, 1, b).
+true_cell(97,1, 2, 1).
+true_cell(97,1, 3, 2).
+true_cell(97,2, 1, 2).
+true_cell(97,2, 2, b).
+true_cell(97,2, 3, b).
+true_cell(97,3, 1, b).
+true_cell(97,3, 2, b).
+true_cell(97,3, 3, 1).
+true_cell(98,1, 1, 3).
+true_cell(98,1, 2, 1).
+true_cell(98,1, 3, b).
+true_cell(98,2, 1, 2).
+true_cell(98,2, 2, 3).
+true_cell(98,2, 3, b).
+true_cell(98,3, 1, b).
+true_cell(98,3, 2, b).
+true_cell(98,3, 3, 2).
+true_cell(99,1, 1, b).
+true_cell(99,1, 2, 1).
+true_cell(99,1, 3, 3).
+true_cell(99,2, 1, 2).
+true_cell(99,2, 2, b).
+true_cell(99,2, 3, b).
+true_cell(99,3, 1, b).
+true_cell(99,3, 2, 2).
+true_cell(99,3, 3, b).
