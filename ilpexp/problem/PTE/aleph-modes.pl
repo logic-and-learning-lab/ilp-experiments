@@ -1,0 +1,87 @@
+:- use_module(library(aleph)).
+:- if(current_predicate(use_rendering/1)).
+:- use_rendering(prolog).
+:- endif.
+:- aleph.
+:-style_check(-discontiguous).
+
+:- aleph_set(verbosity, 0).
+:- aleph_set(interactive, false).
+:- aleph_set(i,6).
+:- aleph_set(clauselength,6).
+:- aleph_set(nodes,30000).
+:- aleph_set(minpos/2).
+:- aleph_set(evalfn,auto_m).
+:- aleph_set(minscore,0.6).
+
+
+:- determination(pte_active/1,postestactive/1).
+:- determination(pte_active/1,postestactive_Neg/1).
+:- determination(pte_active/1,pte_alcohol/2).
+:- determination(pte_active/1,pte_alkyl_halide/2).
+:- determination(pte_active/1,pte_ames/1).
+:- determination(pte_active/1,pte_amine/2).
+:- determination(pte_active/1,pte_atm/5).
+:- determination(pte_active/1,pte_atm_bond_count/2).
+:- determination(pte_active/1,pte_atm_count/2).
+:- determination(pte_active/1,pte_atm_max_charge/2).
+:- determination(pte_active/1,pte_atm_min_charge/2).
+:- determination(pte_active/1,pte_bond/4).
+:- determination(pte_active/1,pte_bond_count/2).
+:- determination(pte_active/1,pte_drug/1).
+:- determination(pte_active/1,pte_ester/2).
+:- determination(pte_active/1,pte_ether/2).
+:- determination(pte_active/1,pte_five_ring/2).
+:- determination(pte_active/1,pte_has_property/3).
+:- determination(pte_active/1,pte_imine/2).
+:- determination(pte_active/1,pte_ind/3).
+:- determination(pte_active/1,pte_ketone/2).
+:- determination(pte_active/1,pte_methoxy/2).
+:- determination(pte_active/1,pte_methyl/2).
+:- determination(pte_active/1,pte_mutagenic/1).
+:- determination(pte_active/1,pte_nitro/2).
+:- determination(pte_active/1,pte_non_ar_5c_ring/2).
+:- determination(pte_active/1,pte_non_ar_6c_ring/2).
+:- determination(pte_active/1,pte_non_ar_hetero_5_ring/2).
+:- determination(pte_active/1,pte_non_ar_hetero_6_ring/2).
+:- determination(pte_active/1,pte_number/1).
+:- determination(pte_active/1,pte_phenol/2).
+:- determination(pte_active/1,pte_six_ring/2).
+:- determination(pte_active/1,pte_sulfide/2).
+:- determination(pte_active/1,pte_sulfo/2).
+
+:- modeh(*,pte_active(+drug_id)).
+:- modeb(*,postestactive(-arg0,)).
+:- modeb(*,postestactive_Neg(-arg0,)).
+:- modeb(*,pte_alcohol(-arg0,-atom_id)).
+:- modeb(*,pte_alkyl_halide(-arg0,-atom_id)).
+:- modeb(*,pte_ames(-arg0,)).
+:- modeb(*,pte_amine(-arg0,-atom_id)).
+:- modeb(*,pte_atm(-drug_id,-atom_id,-atom_type,-arg3,-arg4)).
+:- modeb(*,pte_atm_bond_count(-atom_id,-cnt)).
+:- modeb(*,pte_atm_count(-arg0,-cnt)).
+:- modeb(*,pte_atm_max_charge(-arg0,-mx)).
+:- modeb(*,pte_atm_min_charge(-arg0,-mn)).
+:- modeb(*,pte_bond(-drug_id,-atom_id1,-atom_id2,-arg3)).
+:- modeb(*,pte_bond_count(-arg0,-cnt)).
+:- modeb(*,pte_drug(-drug_id,)).
+:- modeb(*,pte_ester(-arg0,-atom_id)).
+:- modeb(*,pte_ether(-arg0,-atom_id)).
+:- modeb(*,pte_five_ring(-arg0,-atom_id)).
+:- modeb(*,pte_has_property(-arg0,-arg1,-arg2)).
+:- modeb(*,pte_imine(-arg0,-atom_id)).
+:- modeb(*,pte_ind(-arg0,-arg1,-arg2)).
+:- modeb(*,pte_ketone(-arg0,-atom_id)).
+:- modeb(*,pte_methoxy(-arg0,-atom_id)).
+:- modeb(*,pte_methyl(-arg0,-atom_id)).
+:- modeb(*,pte_mutagenic(-arg0,)).
+:- modeb(*,pte_nitro(-arg0,-atom_id)).
+:- modeb(*,pte_non_ar_5c_ring(-arg0,-atom_id)).
+:- modeb(*,pte_non_ar_6c_ring(-arg0,-atom_id)).
+:- modeb(*,pte_non_ar_hetero_5_ring(-arg0,-atom_id)).
+:- modeb(*,pte_non_ar_hetero_6_ring(-arg0,-atom_id)).
+:- modeb(*,pte_number(-binary,)).
+:- modeb(*,pte_phenol(-arg0,-atom_id)).
+:- modeb(*,pte_six_ring(-arg0,-atom_id)).
+:- modeb(*,pte_sulfide(-arg0,-atom_id)).
+:- modeb(*,pte_sulfo(-arg0,-atom_id)).
