@@ -1,0 +1,11 @@
+body_pred(complex/2).
+body_pred(enzyme/2).
+body_pred(interaction/3).
+body_pred(location/2).
+body_pred(path/2).
+body_pred(phenotype/2).
+body_pred(protein_class/2).
+body_pred(rcomplex/2).
+body_pred(renzyme/2).
+body_pred(rphenotype/2).
+body_pred(rprotein_class/2).
