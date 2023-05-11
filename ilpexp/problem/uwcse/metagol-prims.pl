@@ -1,0 +1,11 @@
+body_pred(taughtBy/3).
+body_pred(ta/3).
+body_pred(tempAdvisedBy/2).
+body_pred(projectMember/2).
+body_pred(hasPosition/2).
+body_pred(publication/2).
+body_pred(inPhase/2).
+body_pred(courselevel/2).
+body_pred(yearsInProgram/2).
+body_pred(student/1).
+body_pred(professor/1).
