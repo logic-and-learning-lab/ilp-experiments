@@ -1,79 +1,72 @@
 # ILP Experimentation Framework
-This project is intended to simplify and standardize running experiments on Popper. However, since Popper is just one of ILP systems it can compare, this could be used to compare other ILP systems, both to Popper and to each other.
+[Inductive Logic Programming](https://arxiv.org/pdf/2008.07912.pdf) (ILP) is a form of Machine Learning. The goal of ILP is to induce a hypothesis, as a set of logical rules, that generalises training examples.
+
+This project is intended to simplify and standardize running ILP experiments. It aims at evaluating and comparing different ILP systems on usual benchmarks.
 
 In its current state you can use it by checking out this repo, creating an experiment in `experiment.py` and then running `python3 ilpexp.py exp1` where `exp1` is the name of the experiment you created. This will run your experiment in parallel on your local machine and output the results in a file called `results.json` in the `ilp-experiments` folder.
 
 See `example_notebook.ipynb` for an example of how you might parse the results into latex or charts.
 
 ## Concepts
-An `experiment` is configured with `systems`, `problems` and `trials`. Every `system` is run on every `problem` n times where n is the number of `trials`. So an `experiment` with n `trials`, i `systems` and j `problems` will have `n*i*j` `instances`.
+An `experiment` is configured with `problems`, `systems`, and `trials`. Every `system` is run on every `problem` n times where n is the number of `trials`. So an `experiment` with n `trials`, i `systems` and j `problems` will have `n*i*j` `instances`.
 
 Each instance invokes a run of some ILP system on a specific version of some ILP problem. Each instance results in a solution (or no solution found) and a runtime. For some systems, particularly Popper, extra statistics about the run are output.
 
 The output of the runs of all instances are consolidated and written as a JSON file.
 
-### Systems
-`Systems` are ILP systems capable of solving ILP problems. The three currently supported systems are `popper`, `aleph` and `metagol`. You can compare multiple variants of a `system` by varying the `system's` initialization parameters. See the examples in `experiment.py`
-
-If you'd like to add a system, see the comments in `system/system.py`. You can also add an issue or reach out to me (Brad) on the LOL discord for help. It would be great to have a few more `systems` available.
-
 ### Problems
-`Problems` are ILP problems that can be solved by ILP systems. Currently the following `problems` are working:
+`Problems` are ILP problems that can be solved by ILP systems. Each folder in ./ilpexp represents a dataset and each subfolder represents a task.
+Currently the following `problems` are implemented:
 
-* Inductive General Game Playing (IGGP) [1]:
-  * Buttons
-  * Coins
-  * Minimal Decay
-  * Rainbow
-  * RPS
-* List Transformations [2,3,4]:
-  * Add Head
-  * Drop K
-  * Drop Last
-  * Evens
-  * Find Duplicate
-  * Last
-  * Length
-  * Member
-  * Reverse
-  * Sorted
-  * Sum List
-  * Three Same
-  * ...
-* Rook protected in chess KRK endgame [5]
-* Michalski Trains [6]:
-  * Trains 1-4. Four different variations on the trains problem.
-* Pharmacophore [7]
-* Carcinogenesis [8] 
-* Mutagenesis [9]
-* Alzheimer [10]
-* Protein-hexose binding [11]
-* Graph problems [12]
-* List function problems [13]
-* SQL [14]
-* Integer Sequences [15]
+* Program synthesis:
+  * List Transformations [1,2,3]
+  * Graph problems [4]
+  * List function problems [5]
+  * Integer Sequences [6]
+  * String transformations [7]
+* Game playing:
+  * Inductive General Game Playing (IGGP) [8]:
+  * Chess KRK endgame [9]
+  * Zendo [10]
+* Biological datasets:
+  * Alzheimer [11]
+  * Carcinogenesis [12]
+  * Drug-drug interaction [13]
+  * Ecoli [14]
+  * Mutagenesis [15]
+  * Pharmacophore [16]
+  * Protein [17]
+  * Protein-hexose binding [18]
+  * PTC [19]
+  * PTE [20]
+  * Suranim [21]
+  * Yeast [22]
+* Physics
+  * Mesh [23]
+  * Satellite: temporal fault diagnosis
+* Databases
+  * IMDB [24]
+  * UW-CSE [25]
+* Michalski Trains [26]
+* SQL [27]
 
-If you'd like to add more problems, see `problem/problem.py` or again add an issue or reach out to me (Brad) on discord. Adding individual problems to the existing types (iggp, list or trains) should be pretty straight forward. Adding a different type is a bit more complex.
+### Systems
+`Systems` are ILP systems capable of solving ILP problems. The three currently supported systems are:
+* [Popper](https://github.com/logic-and-learning-lab/Popper): the Popper repository should be checked out somewhere and its requirements need to be installed. The default assumption is that Popper is in a folder called Popper which is a sibling of this repository. You can change this when initializing the `Popper` system in your experiment.
+* [Aleph](https://www.cs.ox.ac.uk/activities/programinduction/Aleph/aleph.html#SEC31): SWI Prolog must be installed. Aleph must be installed as a pack in SWI Prolog. To do this, run `swipl` from the command line and then run the command `pack_install(aleph)` in SWI Prolog.
+* [Metagol](https://github.com/metagol/metagol): SWI Prolog must be installed. The Metagol prolog file is included in this repo for convenience.
 
-### Runner
+You can compare multiple variants of a `system` by varying the `system's` initialization parameters. See the examples in `experiment.py`
+
+If you'd like to add more problems or a system, start a PR, add an issue or reach out.
+
 The `runner` executes the experiment. Right now the only `runner` is `simple`. The `simple runner` runs the experiment locally with the number of threads capped to half the number of cpus on the machine. 
-
-In the future we can add runners for running experiments on Oxford ARC or AWS.
 
 ## Requirements
 The following requirements need to be satisfied for the various systems to work.
 
-### Popper
-The Popper repository should be checked out somewhere and its requirements need to be installed. The default assumption is that Popper is in a folder called Popper which is a sibling of Popper-experiments. You can change this when initializing the `Popper` system in your experiment.
-
-### Aleph
-SWI Prolog must be installed. Aleph must be installed as a pack in SWI Prolog. To do this, run `swipl` from the command line and then run the command `pack_install(aleph)` in SWI Prolog.
-
-### Metagol
-SWI Prolog must be installed. The Metagol prolog file is included in this repo for convenience. Note: I should check with Andrew that this is OK since I think he's the original author.
-
 ## Examples
-There are a few examples of different experiment setups in `experiment.py`. There are also comments within the various source files explaining how they can be initialized. If you need more help, reach out to me (Brad) on discord.
+There are a few examples of different experiment setups in `experiment.py`. There are also comments within the various source files explaining how they can be initialized.
 
 ## Known Issues
 ### Timeouts
@@ -87,10 +80,7 @@ It's also worth noting that there are 3 places timeouts can be enforced in the s
 It's likely we can enforce the same timeout in each place. However, that likely means the thread runner kills the thread slightly before the subtask times out and before the system handles it. Anyway, the bigger point is that timeouts are messy and it requires a bit of thought.
 
 ### Accuracy
-Right now the accuracy defaults to 50% when no solution is found. This assumes the positive and negative examples are balanced. As Rolf and Andrew discussed in discord, it's probably more correct to run the program `false` (which implies everything) in the tester and use the resulting confusion matrix. This has the nice side effect of always populating the confusion matrix, even when a program is not found. This is a simple fix I just haven't made yet.
-
-### Unfinished problems
-A few of the problems in the repo are not fully implemented. `iggp-rainbows` is incomplete. A few of the lists problems may also be buggy. We should either fix these or remove them from the repo.
+Right now the accuracy defaults to 50% when no solution is found. This assumes the positive and negative examples are balanced.
 
 ## Future Work
 
@@ -107,18 +97,31 @@ It would be great to add more problems and support more systems. The best way fo
 
 
 ### References
-[1] Cropper, A.; Evans, R.; and Law, M. 2020. Inductive general game playing. Machine Learning, (7): 1393–1434.  
-[2] Cropper, A.; and Morel, R. 2021. Learning programs by learning from failures. Machine Learning., (4): 801–856.  
-[3] Ahlgren, J., & Yuen, S. Y. (2013). Efficient program synthesis using constraint satisfaction in inductive logic programming. The Journal of Machine Learning Research, 14(1), 3649-3682.  
-[4] Purgał, S. J., Cerna, D. M., & Kaliszyk, C. Learning Higher-Order Logic Programs From Failures.  
-[5] Hocquette, C., & Muggleton, S. H. (2021, January). Complete bottom-up predicate invention in meta-interpretive learning. In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence (pp. 2312-2318).  
-[6] Larson, J.; and Michalski, R. S. 1977. Inductive inference of VL decision rules. SIGART Newsletter, 38–44.  
-[7] Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.  
-[8] Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.  
-[9] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).  
-[10] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.  
-[11] A Santos, J. C., Nassif, H., Page, D., Muggleton, S. H., & E Sternberg, M. J. (2012). Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13(1), 1-11.  
-[12] Learning explanatory rules from noisy data, R. Evans, E. Grefenstette Journal of Artificial Intelligence Research 61, 1-64.  
-[13] https://github.com/joshrule/list_function_250  
-[14] Provenance-Guided Synthesis of Datalog Programs, M. Raghothaman, J. Mendelson, D. Zhao, M. Naik, B. Scholz. 
-[15] T. Gauthier, J. Urban, Learning Program Synthesis for Integer Sequences from Scratch, AAAI23. 
+[1] Cropper, A.; and Morel, R. 2021. Learning programs by learning from failures. Machine Learning., (4): 801–856.  
+[2] Ahlgren, J., & Yuen, S. Y. (2013). Efficient program synthesis using constraint satisfaction in inductive logic programming. The Journal of Machine Learning Research, 14(1), 3649-3682.  
+[3] Purgał, S. J., Cerna, D. M., & Kaliszyk, C. Learning Higher-Order Logic Programs From Failures.  
+[4] Evans R., Grefenstette E., Journal of Artificial Intelligence Research 61, 1-64, Learning explanatory rules from noisy data.  
+[5] Rule J., The child as hacker: building more human-like models of learning, PhD thesis, code available at https://github.com/joshrule/list_function_250.  
+[6] Gauthier T., Urban J., Learning Program Synthesis for Integer Sequences from Scratch, AAAI23.  
+[7] Dumancic, S., Guns T., and Cropper A., "Knowledge refactoring for inductive program synthesis." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 35. No. 8. 2021.  
+[8] Cropper, A.; Evans, R.; and Law, M. 2020. Inductive general game playing. Machine Learning, (7): 1393–1434.  
+[9] Hocquette, C., & Muggleton, S. H. (2021, January). Complete bottom-up predicate invention in meta-interpretive learning. In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence (pp. 2312-2318).  
+[10] Hocquette, C. and Cropper, A., Relational program synthesis with numerical reasoning. AAAI, 2023.  
+[11] King, R. D., Sternberg, M. J., & Srinivasan, A. (1995). Relating chemical activity to structure: an examination of ILP successes. New Generation Computing, 13(3), 411-433.  
+[12] Srinivasan, A., King, R. D., Muggleton, S. H., & Sternberg, M. J. (1997, September). Carcinogenesis predictions using ILP. In International Conference on Inductive Logic Programming (pp. 273-287). Springer, Berlin, Heidelberg.  
+[13] Dhami, D.S., Kunapuli, G., Das, M., Page, D. and Natarajan, S., 2018. Drug‐drug interaction discovery: kernel learning from heterogeneous similarities. Smart Health, 9, pp.88-100.  
+[14] King, R.D., Muggleton, S., Lewis, R.A. and Sternberg, M.J., 1992. Drug design by machine learning: the use of inductive logic programming to model the structure-activity relationships of trimethoprim analogues binding to dihydrofolate reductase. Proceedings of the national academy of sciences, 89(23), pp.11322-11326.  
+[15] Srinivasan, A., Muggleton, S., King, R. D., & Sternberg, M. J. (1994, September). Mutagenesis: ILP experiments in a non-determinate biological domain. In Proceedings of the 4th international workshop on inductive logic programming (Vol. 237, pp. 217-232).  
+[16] Finn, P., Muggleton, S., Page, D., & Srinivasan, A. (1998). Pharmacophore discovery using the inductive logic programming system Progol. Machine Learning, 30(2), 241-270.  
+[17] Muggleton S., King R.D., and Sternberg M.J.E. (1992). Predicting protein secondary structure using inductive logic programming. Protein Engineering, 5:647-657.  
+[18] A Santos, J.C., Nassif, H., Page, D., Muggleton, S.H. and E Sternberg, M.J., 2012. Automated identification of protein-ligand interaction features using Inductive Logic Programming: a hexose binding case study. BMC bioinformatics, 13, pp.1-11.  
+[19] https://relational.fit.cvut.cz/dataset/PTC  
+[20] https://relational.fit.cvut.cz/dataset/PTE  
+[21] Braddock, P. S., D.-E. Hu, et al. (1994). A structure-activity analysis of  the growth factor and angiogenic activity of basic fibrobalst growth factor by suramin and related polyanions. Br. J. Cancer. 69: 890-898.  
+[22] J. Davis, E. Burnside, I. C. Dutra, D. Page, and V. Santos Costa. An integrated approach to learning bayesian networks of rules. In 16th European Conference on Machine Learning, pages 84–95, 2005.  
+[23] Dolsak B. and Muggleton S. (1992). The application of Inductive Logic Programming to finite element mesh design. In S. Muggleton editor. Inductive Logic Programming, Academic Press, London.  
+[24] Lilyana Mihalkova, Tuyen Huynh, and Raymond J Mooney. Mapping and revising markov logic networks for transfer learning. In Aaai, volume 7, pages 608–614, 2007.  
+[25] Matthew Richardson and Pedro Domingos. Markov logic networks. Machine learning, 62(1-2):107– 136, 2006.  
+[26] Larson, J.; and Michalski, R. S. 1977. Inductive inference of VL decision rules. SIGART Newsletter, 38–44.  
+[27] M. Raghothaman, J. Mendelson, D. Zhao, M. Naik, B. Scholz, Provenance-Guided Synthesis of Datalog Programs.  
+
