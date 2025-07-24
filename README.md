@@ -1,3 +1,5 @@
+# **THIS REPOSITORY IS NOT MAINTAINED. DO NOT USE IT!** #
+
 # ILP Experimentation Framework
 [Inductive Logic Programming](https://arxiv.org/pdf/2008.07912.pdf) (ILP) is a form of Machine Learning. The goal of ILP is to induce a hypothesis, as a set of logical rules, that generalises training examples.
 
